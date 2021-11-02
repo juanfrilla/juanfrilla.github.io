@@ -169,6 +169,7 @@
     "is-typedarray": "^1.0.0",
     "is-weakref": "^1.0.1",
     "isexe": "^2.0.0",
+    "jquery": "^3.6.0",
     "js-tokens": "^4.0.0",
     "js-yaml": "^3.14.1",
     "jsesc": "^2.5.2",

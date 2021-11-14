@@ -17,8 +17,13 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
   <title>JF Español</title>
-  <script type="module" crossorigin src="/index.c0ed7041.js"></script>
+  <script type="module" crossorigin src="/index.505b8230.js"></script>
 </head>
 
 <body>
@@ -31,23 +36,23 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <div class="container justify-content-center">
         <ul class="navbar-nav mr-auto ">
-          <li class="nav-item active p-2">
+          <li class="about nav-item p-2">
             <a class="nav-link" href="#about">Sobre mí <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item p-2">
+          <li class="training nav-item p-2">
             <a class="nav-link" href="#training">Formación</a>
           </li>
-          <li class="nav-item p-2">
+          <li class="addtraining nav-item p-2">
             <a class="nav-link" href="#addtraining">Formación Complementaria</a>
           </li>
           <li class="nav-item p-2">
             <a class="nav-link" href="#languages">Idiomas</a>
           </li>
-          <li class="nav-item p-2">
+          <li class="experience nav-item p-2">
             <a class="nav-link" href="#experience">Experiencia</a>
           </li>
-          <li class="nav-item p-2">
-            <a class="nav-link" href="#another">Otra información de interés</a>
+          <li class="another nav-item p-2">
+            <a class="nav-link" href="#another">Información adicional</a>
           </li>
         </ul>
       </div>
@@ -57,11 +62,11 @@
     </li>
   </nav>
   <br>
-  <div class="container justify-content-center">
-    <div class="card mt-5 border-0">
-      <div class="row" id="home">
+  <div class="container justify-content-center" >
+    <section class="card mt-5 border-0" id="home">
+      <div class="row" >
         <div class="card-body">
-          <h4 class="card-title text-center" id="home">Juan Francisco Martín Rodríguez - Full Stack Developer</h4>
+          <h4 class="card-title text-center">Juan Francisco Martín Rodríguez - Full Stack Developer</h4>
           <hr color="black">
           <div class="container">
             <div class="row ">
@@ -93,8 +98,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="card mt-4 border-dark" id="about">
+    </section>
+    <section class="card mt-4 border-dark" id="about">
       <div class="row">
         <div class="col-sm-9">
           <div class="card-body">
@@ -116,9 +121,9 @@
             width="100px">
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="card mt-4 border-dark p-3" id="training">
+    <section class="card mt-4 border-dark p-3" id="training">
       <div class="row">
         <div class="card-body">
           <h4 class="card-title">Formación</h4>
@@ -134,9 +139,9 @@
           </ul>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="card mt-4 border-dark p-3" id="addtraining">
+    <section class="card mt-4 border-dark p-3" id="addtraining">
       <div class="row">
         <div class="card-body">
           <h4 class="card-title">Formación complementaria</h4>
@@ -173,8 +178,8 @@
           </ul>
         </div>
       </div>
-    </div>
-    <div class="card mt-4 border-dark p-3" id="languages">
+    </section>
+    <section class="card mt-4 border-dark p-3" id="languages">
       <div class="row">
         <div class="card-body">
           <h4 class="card-title">Idiomas</h4>
@@ -187,84 +192,82 @@
           </ul>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="card mt-4 border-dark p-3" id="experience">
+    <section class="card mt-4 border-dark p-3" id="experience">
       <div class="row">
         <div class="card-body">
           <h4 class="card-title">Experiencia</h4>
           <hr color="black">
           <ul>
             <li>
-              <p class="card-text">Sept. – Dic. 2021. Proyecto “Pick-Auto”, en el marco del curso de Programación Web
+              <p class="card-text text-justify mb-2">Sept. – Dic. 2021. Proyecto “Pick-Auto”, en el marco del curso de Programación Web
                 FullStack de la EOI. Aplicación para ayudar a los usuarios con poco tiempo a gestionar los servicios
                 necesarios para su vehículo, estableciendo citas entre chóferes y usuarios. Tecnologías utilizadas:
                 MariaDB, Express, React,
-                Node, Docker.</p>
+                Node, Docker. [Ver proyecto (<a href="https://github.com/fullstacktf/motor-services-frontend" target="_blank">front-end</a>)(<a href="https://github.com/fullstacktf/motor-services-backend" target="_blank">back-end</a>)]</p> 
             </li>
             <li>
-              <p class="card-text">Mar. – Sept., 2021. Ayuntamiento de Tías – Técnico Informático ofreciendo soporte a
+              <p class="card-text text-justify mb-2">Mar. – Sept., 2021. Ayuntamiento de Tías – Técnico Informático ofreciendo soporte a
                 los empleados (configuración de equipos, reparación de PCS, formateo, recuperación de datos,
                 configurar las impresoras y escáneres, puesta a punto de Microsoft 365 y Windows 10, migración de
                 correos de POP a IMAP...). Apoyo al catastro automatizando descargas con Python y Selenium para
                 integrarlos en el programa QGIS.</p>
             </li>
             <li>
-              <p class="card-text">Feb. 2021 – Jul.,2021. Proyecto “Ads” en el marco del curso Django for Everybody. Proyecto donde publicar anuncios y poner comentarios en ellos. 
-                Tecnologías utilizadas: Django, PostgreSQL, Bootstrap.</p>
+              <p class="card-text text-justify mb-2">Feb. 2021 – Jul.,2021. Proyecto “Ads” en el marco del curso Django for Everybody. Proyecto donde publicar anuncios y poner comentarios en ellos. 
+                Tecnologías utilizadas: Django, PostgreSQL, Bootstrap. (<a href="https://github.com/JuanFran928/dj4e" target="_blank">Ver proyecto</a>)</p>
             </li>
             <li>
-              <p class="card-text">Febr., 2018 – Jul, 2019. Trabajo de Fin de Grado. Proyecto “Diseño y Desarrollo en
+              <p class="card-text text-justify mb-2">Febr., 2018 – Jul, 2019. Trabajo de Fin de Grado. Proyecto “Diseño y Desarrollo en
                 Entorno Matlab de un Sistema para la Detección y Localización de Eventos Sonoros Atmosféricos
                 Singulares”. – Se han combinado técnicas de Machine Learning y DOA (Localización de la Dirección de
                 Procedencia) para detectar y clasificar eventos sonoros como lluvia o sonido ambiente y cuando se
                 trata de truenos, localizar su dirección de procedencia. Tecnologías utilizadas: Matlab, Machine
-                Learning, DOA.</p>
+                Learning, DOA. (<a href="https://accedacris.ulpgc.es/handle/10553/75782" target="_blank">Ver proyecto</a>)</p>
             </li>
             <li>
-              <p class="card-text">Oct., 2017 – May., 2018. Universidad de las Palmas de Gran Canaria – Prácticas de
+              <p class="card-text text-justify mb-2">Oct., 2017 – May., 2018. Universidad de las Palmas de Gran Canaria – Prácticas de
                 empresa en el vicerrectorado de Cultura y Sociedad con tareas tales como grabar eventos y
                 postproducción de audio en el estudio de grabación (Entornos utlizados: Protools, Audacity).</p>
             </li>
           </ul>
         </div>
       </div>
-    </div>
+    </section>
     <div class="card mt-4 mb-4 border-dark p-3">
-      <div class="row" id="another">
+      <section class="row" id="another">
         <div class="card-body">
-          <h4 class="card-title">Otra información de interés</h4>
+          <h4 class="card-title">Información adicional</h4>
           <hr color="black">
           <div class="container">
-            <div class="row ">
-              <div class="col-sm-4">
-                Permiso de conducir.
+            <div class="container">
+              <div class="row ">
+                <div class="col-sm-4">
+                  ✔Permiso de conducir.
+                </div>
+                <div class="col-sm-4">
+                  ✔Movilidad por el territorio español.
+                </div>
+                <div class="col-sm-4 ">
+                  ✔Incorporación a partir de enero de 2022.
+                </div>
               </div>
-              <div class="col-sm-4">
-                Movilidad por el territorio español.
-              </div>
-            </div>
-            <div class="row ">
-              <div class="col-sm-4 ">
-                Incorporación a partir de enero de 2022.
-              </div>
-              <div class="col-sm-4">
-                Abierto al teletrabajo.
-              </div>
-              <div class="col-sm-4">
-                Flexibilidad horaria.
-              </div>
-              <div class="col-sm-3">
-              </div>
-            </div>
-            <div class="row ">
-              <div class="col-sm-4 ">
-                Inscrito en el programa de garantía juvenil.
+              <div class="row ">
+                <div class="col-sm-4">
+                  ✔Inscrito en el programa de garantía juvenil.
+                </div>
+                <div class="col-sm-4">
+                  ✔Flexibilidad horaria.
+                </div>
+                <div class="col-sm-4">
+                  ✔Abierto al teletrabajo.
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
     <div class="card border-0">
       <div class="card-body text-center">

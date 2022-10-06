@@ -1,5 +1,3 @@
-import { forEach } from "lodash";
-
 const navLinks = document.querySelectorAll("a");
 navLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
@@ -36,11 +34,11 @@ const language = async () => {
     "add_training_desc_2", "add_training_desc_3", "add_training_desc_4", "add_training_desc_5", "add_training_desc_6", "add_training_desc_7", "view_project1", "view_project2"]
 
   if (isChecked === true) {
-    forEach(navbar_ids, function (id) {
+    navbar_ids.forEach(navbar_ids, function (id) {
       document.getElementById(id).innerHTML = json['en'][id]
     })
   } else {
-    forEach(navbar_ids, function (id) {
+    navbar_ids.forEach(navbar_ids, function (id) {
       document.getElementById(id).innerHTML = json['es'][id]
     })
   }

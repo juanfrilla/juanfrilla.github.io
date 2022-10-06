@@ -35,11 +35,11 @@ const language = async () => {
 
   if (isChecked === true) {
     for (var id = 0; id < navbar_ids.length; id++) {
-      document.getElementById(id).innerHTML = json['en'][id]
+      document.getElementById(navbar_ids[id]).innerHTML = json['en'][navbar_ids[id]]
     }
   } else {
     for (var id = 0; id < navbar_ids.length; id++) {
-      document.getElementById(id).innerHTML = json['es'][id]
+      document.getElementById(navbar_ids[id]).innerHTML = json['es'][navbar_ids[id]]
     }
   }
 }

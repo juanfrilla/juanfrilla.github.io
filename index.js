@@ -18,7 +18,7 @@ navLinks.forEach(function (link) {
 });
 
 async function loadJSON() {
-  const response = await fetch("./lang.json");
+  const response = await fetch("./assets/lang.json");
   const json = await response.json();
   return json
 }

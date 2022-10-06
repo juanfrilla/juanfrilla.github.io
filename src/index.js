@@ -48,3 +48,4 @@ const language = async () => {
 
 
 check.addEventListener("click", language);
+

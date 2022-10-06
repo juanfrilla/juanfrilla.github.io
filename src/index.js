@@ -34,13 +34,13 @@ const language = async () => {
     "add_training_desc_2", "add_training_desc_3", "add_training_desc_4", "add_training_desc_5", "add_training_desc_6", "add_training_desc_7", "view_project1", "view_project2"]
 
   if (isChecked === true) {
-    navbar_ids.forEach((id) => {
+    for (var id = 0; id < navbar_ids.length; id++) {
       document.getElementById(id).innerHTML = json['en'][id]
-    })
+    }
   } else {
-    navbar_ids.forEach((id) => {
+    for (var id = 0; id < navbar_ids.length; id++) {
       document.getElementById(id).innerHTML = json['es'][id]
-    })
+    }
   }
 }
 

@@ -39,7 +39,7 @@ const language = async () => {
     }
   } else {
     for (var id = 0; id < navbar_ids.length; id++) {
-      document.getElementById(navbar_ids[id]).innerHTML = json['en'][navbar_ids[id]]
+      document.getElementById(navbar_ids[id]).innerHTML = json['es'][navbar_ids[id]]
     }
   }
 }

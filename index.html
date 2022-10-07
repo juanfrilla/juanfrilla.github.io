@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono" rel="stylesheet">
@@ -34,9 +36,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <div class="container justify-content-center">
-        <ul class="navbar-nav mr-auto ">
+        <ul class="navbar-nav mr-auto nav-pills">
           <li class="about nav-item p-2">
             <a class="nav-link" id="about_nav" href="#about">Sobre mí <span class="sr-only">(current)</span></a>
+            <!--active-->
           </li>
           <li class="training nav-item p-2">
             <a class="nav-link" id="training_nav" href="#training">Formación</a>
@@ -58,9 +61,9 @@
     </div>
     <li class="nav-item p-2 d-flex justify-content-end">
       <!-- <a class="nav-link english" href="https://juanfran928.github.io/english"> Translate into English</a> -->
-      <span class="es">Español</span>
+      <span class="es">Español <span class="fi fi-es"></span></span>
       <input type="checkbox" class="check">
-      <span class="en">English</span>
+      <span class="en"><span class="fi fi-gb"></span> English</span>
     </li>
   </nav>
   <br>
@@ -86,7 +89,8 @@
               </div>
             </div>
             <div class="row ">
-              <div class="col-sm-3" id="personal_1"> <!-- TODO Calcular años automaticamente -->
+              <div class="col-sm-3" id="personal_1">
+                <!-- TODO Calcular años automaticamente -->
                 🎂 04/08/1994 (27 años)
               </div>
               <div class="col-sm-3">
@@ -149,29 +153,31 @@
           <hr color="black">
           <ul>
             <li>
-              <p class="card-text" id ="add_training_text">
+              <p class="card-text" id="add_training_text">
                 SEPT - DIC 2021 PROGRAMACIÓN WEB FULLSTACK, ESCUELA DE ORGANIZACIÓN INDUSTRIAL (EOI). 334 HORAS
                 LECTIVAS
               <ul>
-                <li id ="add_training_desc_1">Front-end (HTML5/CSS3, Flexbox, Grid CSS, PostCSS, etc...).</li>
+                <li id="add_training_desc_1">Front-end (HTML5/CSS3, Flexbox, Grid CSS, PostCSS, etc...).</li>
               </ul>
               <ul>
-                <li id ="add_training_desc_2">Bases de datos (SQL(MySQL) y NoSQL (MongoDB)).</li>
+                <li id="add_training_desc_2">Bases de datos (SQL(MySQL) y NoSQL (MongoDB)).</li>
               </ul>
               <ul>
-                <li id ="add_training_desc_3">Servidores web y Cloud Hosting (NGINX, Digital Ocean, Cloudflare, Dominios...).</li>
+                <li id="add_training_desc_3">Servidores web y Cloud Hosting (NGINX, Digital Ocean, Cloudflare,
+                  Dominios...).</li>
               </ul>
               <ul>
-                <li id ="add_training_desc_4">Frameworks SPA (VueJS, React, WebComponents, LitElement).</li>
+                <li id="add_training_desc_4">Frameworks SPA (VueJS, React, WebComponents, LitElement).</li>
               </ul>
               <ul>
-                <li id ="add_training_desc_5">Programación (Código Limpio, Testing, Buenas Prácticas...).</li>
+                <li id="add_training_desc_5">Programación (Código Limpio, Testing, Buenas Prácticas...).</li>
               </ul>
               <ul>
-                <li id ="add_training_desc_6"> Back-end (Javascript,Node.js+Express, Go).</li>
+                <li id="add_training_desc_6"> Back-end (Javascript,Node.js+Express, Go).</li>
               </ul>
               <ul>
-                <li id ="add_training_desc_7">DevOps/Automatización (Terminal, GNU/Linux, Git, Empaquetadores JS, WebPack, Docker, CD/CI...).
+                <li id="add_training_desc_7">DevOps/Automatización (Terminal, GNU/Linux, Git, Empaquetadores JS,
+                  WebPack, Docker, CD/CI...).
                 </li>
               </ul>
               </p>
@@ -223,7 +229,8 @@
                 Singulares”. – Se han combinado técnicas de Machine Learning y DOA (Localización de la Dirección de
                 Procedencia) para detectar y clasificar eventos sonoros como lluvia o sonido ambiente y cuando se
                 trata de truenos, localizar su dirección de procedencia. Tecnologías utilizadas: Matlab, Machine
-                Learning, DOA. </div>(<a href="https://accedacris.ulpgc.es/handle/10553/75782" target="_blank" id="view_project2">Ver proyecto</a>)</p>
+                Learning, DOA. </div>(<a href="https://accedacris.ulpgc.es/handle/10553/75782" target="_blank"
+                id="view_project2">Ver proyecto</a>)</p>
             </li>
             <li>
               <p class="card-text text-justify mb-2" id="experience_4">Oct., 2017 – May., 2018. Universidad de las

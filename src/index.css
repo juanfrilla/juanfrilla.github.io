@@ -7,12 +7,16 @@ a {
     text-decoration: none;
 }
 
+.nav-item.active a {
+  color: red;
+}
+
 .en {
   color: #fff;
 }
 
 .es {
-  color: #00a1ff;
+  color: #fff;
 }
 
 .check{

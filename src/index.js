@@ -43,9 +43,37 @@ const language = async () => {
     }
   }
 }
-
-
-
-
 check.addEventListener("click", language);
+
+
+// const links = document.querySelectorAll('.nav-link');
+
+// if (links.length) {
+//   links.forEach((link) => {
+//     link.addEventListener('click', (e) => {
+//       links.forEach((link) => {
+//         link.classList.remove('active');
+//       });
+//       e.preventDefault();
+//       link.classList.add('active');
+//     });
+//   });
+// }
+
+
+// const actives = document.querySelector('.active')
+
+// if (actives.length) {
+//   console.log("entra")
+//   window.addEventListener('scroll', (e) => {
+
+
+//     const x = document.querySelector('.active').classList.remove('active');
+//     e.preventDefault();
+  
+//     console.log(x)
+  
+//   });
+
+// }
 

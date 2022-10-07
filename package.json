@@ -110,6 +110,7 @@
     "fill-range": "^7.0.1",
     "find-cache-dir": "^3.3.2",
     "find-up": "^2.1.0",
+    "flag-icons": "^6.6.6",
     "flat-cache": "^3.0.4",
     "flatted": "^3.2.2",
     "fs-extra": "^8.1.0",

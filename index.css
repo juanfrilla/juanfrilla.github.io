@@ -7,24 +7,27 @@ a {
   text-decoration: none;
 }
 
-.en {
-color: #fff;
+.nav-item.active a {
+color: red;
 }
 
-.es {
+.lang {
 color: #fff;
+position:relative;
 }
 
 .check{
 position: relative;
-width: 50px;
+width: 40px;
+margin-left: 5px;
+margin-right: 5px;
 
 }
 .check::before{
 content: '';
 position: absolute;
-width: 50px;
-height: 25px;
+width: 40px;
+height: 20px;
 background: #fff;
 border-radius: 25px;
 }
@@ -32,17 +35,17 @@ border-radius: 25px;
 .check::after{
 content:'';
 position:absolute;
-width: 25px;
-height: 25px;
+width: 20px;
+height: 20px;
 background:#fff;
-border-radius:25px;
+border-radius:20px;
 transition: 0.25s;
 border: 2px solid #333;
 box-sizing: border-box;
 }
 
 .check:checked:after{
-left: 25px;
+left: 20px;
 border: 2px solid #00a1ff;
 }
 

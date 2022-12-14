@@ -1,5 +1,6 @@
 {
     "en": {
+        "title": "JF English",
         "header": "Juan Francisco Martín Rodríguez - Back End Developer",
         "about_nav": "About",
         "training_nav": "Training",
@@ -21,10 +22,10 @@
         "another_text_3": "✔Inmediate incorporation.",
         "another_text_4": "✔Sunscribed to spanish youth guarantee program.",
         "another_text_5": "✔Open to work remotely.",
-        "download_cv":  "<a href=\"https://drive.google.com/file/d/1nhOeRYhgds_Dlp0-WycVKtCzEoiDGVvx/view?usp=sharing\"class=\"btn btn-success\" target=\"_blank\" id=\"download_cv\"><i class=\"fa fa-download\"></i>Download my resumé!</a>",
-        "experience_1": "2022, Mar. – Present. <b>Tu Calendi</b> – Back-end developer, I worked in a team with another partner, developing and deploying a public API using the Python framework FastAPI, in addition to MariaDB, Docker, Linux, Git and Plesk. ",
-        "experience_2": "2021, Mar. – 2021, Sept. <b>Tías Town Hall</b> – Computer technician offering support to employees (configuration, repair, formatting, data recovery, configuring scanners and printers, setting-up of Microsoft 365 and Windows 10, mail migration from POP to IMAP… ) Support to cadastrial office making scripts with Python and Selenium to integrate them in the QGIS program.",
-        "experience_3": "2018, Febr. – 2019, Jul. <b>Final Degree Project</b>. \"Design and Development in the Matlab Environment of a Detection and Location System for Singular Atmospheric Sound Events”. It has been combined Machine Learning and Detection of Arrival (DOA) techniques to detect and classify atmospheric sound events such as rain, ambient sound and thunders locating the provenance of the source. Used Technologies: Matlab, Machine Learning, DOA. <span ><a href=\"https://accedacris.ulpgc.es/handle/10553/75782\" target=\"_blank\">(View project)</a></span>",
+        "download_cv": "<a href=\"https://drive.google.com/file/d/1nhOeRYhgds_Dlp0-WycVKtCzEoiDGVvx/view?usp=sharing\"class=\"btn btn-success\" target=\"_blank\" id=\"download_cv\"><i class=\"fa fa-download\"></i>Download my resumé!</a>",
+        "experience_1": "<p class=\"card-text text-justify mb-2\" id=\"experience_1\"> 2022, Mar. – Present. <b>Tu Calendi</b> – Back-end developer, I worked in a team with another partner, developing and deploying a public API using the Python framework FastAPI, in addition to MariaDB, Docker, Linux, Git and Plesk. <span><a href=\"https://www.tucalendi.com/es/\" target=\"_blank\">(https://www.tucalendi.com/es/)</a></span></p>",
+        "experience_2": "<p class=\"card-text text-justify mb-2\" id=\"experience_2\"> 2021, Mar. – 2021, Sept. <b>Tías Town Hall</b> – Computer technician offering support to employees (configuration, repair, formatting, data recovery, configuring scanners and printers, setting-up of Microsoft 365 and Windows 10, mail migration from POP to IMAP… ). Support to cadastrial office making scripts with Python and Selenium to integrate them in the QGIS program. <span><a href=\"https://www.ayuntamientodetias.es/\" target=\"_blank\">(https://www.ayuntamientodetias.es/)</a></span></p>",
+        "experience_3": "<p> 2018, Febr. – 2019, Jul. <b>Final Degree Project</b>. \"Design and Development in the Matlab Environment of a Detection and Location System for Singular Atmospheric Sound Events”. It has been combined Machine Learning and Detection of Arrival (DOA) techniques to detect and classify atmospheric sound events such as rain, ambient sound and thunders locating the provenance of the source. Used Technologies: Matlab, Machine Learning, DOA. <span ><a href=\"https://accedacris.ulpgc.es/handle/10553/75782\" target=\"_blank\">(View project)</a></span> </p>",
         "experience_4": "Oct. 2017 – May. 2018. <b>University of Las Palmas de Gran Canaria</b> – Internship at the Vicerectorate of Culture and Society with tasks mostly in the recording studio, such as recording events or audio postproduction at studio. (Used environments: Protools, Audacity).",
         "personal_1": "🎂 1994,04/08 (28 years old)",
         "personal_2": "📍 Teguise, Lanzarote, Spain",
@@ -38,6 +39,7 @@
         "add_training_desc_7": "DevOps/Automation (Terminal, GNU/Linux, Git, JS Packages, WebPack, Docker, CI/CD...)."
     },
     "es": {
+        "title": "JF Español",
         "header": "Juan Francisco Martin Rodriguez - Desarrollador Back End",
         "about_nav": "Sobre mí",
         "training_nav": "Formación",
@@ -60,8 +62,8 @@
         "another_text_4": "✔Inscrito en el programa de garantía juvenil.",
         "another_text_5": "✔Abierto al teletrabajo.",
         "download_cv": "<a href=\"https://drive.google.com/file/d/1GDn8Nxtql-vqy5Ga9H-r_iKfEcQVz34b/view?usp=share_link\"class=\"btn btn-success\" target=\"_blank\" id=\"download_cv\"><i class=\"fa fa-download\"></i>¡Descargar mi curriculum!</a>",
-        "experience_1": "Mar. 2022 - Actualidad. <b>Tu Calendi</b> - Desarrollador Back-end, trabajé en equipo con otro compañero realizando el desarrollo y desplegué de la API usando el framework de Python FastAPI, además de MariaDB, Docker, Linux, Git y Plesk. ",
-        "experience_2": "Mar. – Sept. 2021. <b>Ayuntamiento de Tías</b> – Técnico Informático ofreciendo soporte a los empleados (configuración de equipos, reparación de PCS, formateo, recuperación de datos, configurar las impresoras y escáneres, puesta a punto de Microsoft 365 y Windows 10, migración de correos de POP a IMAP...). Apoyo al catastro automatizando descargas con Python y Selenium para integrarlos en el programa QGIS",
+        "experience_1": "<p class=\"card-text text-justify mb-2\" id=\"experience_1\">Mar. 2022 – Actualidad. <b>Tu Calendi</b> – Desarrollador Back-end, trabajé en equipo con otro compañero realizando el desarrollo y desplegué de la API usando el framework de Python FastAPI, además de MariaDB, Docker, Linux, Git y Plesk. <span><a href=\"https://www.tucalendi.com/es/\" target=\"_blank\">(https://www.tucalendi.com/es/)</a></span></p>",
+        "experience_2": "<p class=\"card-text text-justify mb-2\" id=\"experience_2\">Mar. – Sept. 2021. <b>Ayuntamiento de Tías</b> – Técnico Informático ofreciendo soporte a los empleados (configuración de equipos, reparación de PCS,formateo, recuperación de datos, configurar las impresoras y escáneres, puesta a punto de Microsoft 365 y Windows 10, migración de correos de POP a IMAP...). Apoyo al catastro automatizando descargas con Python y Selenium para integrarlos en el programa QGIS. <span><a href=\"https://www.ayuntamientodetias.es/\" target=\"_blank\">(https://www.ayuntamientodetias.es/)</a></span></p>",
         "experience_3": "<p> Febr. 2018 – Jul, 2019. <b>Trabajo de Fin de Grado</b>. Proyecto “Diseño y Desarrollo en Entorno Matlab de un Sistema para la Detección y Localización de Eventos Sonoros Atmosféricos Singulares”. – Se han combinado técnicas de Machine Learning y DOA (Localización de la Dirección de Procedencia) para detectar y clasificar eventos sonoros como lluvia o sonido ambiente y cuando se trata de truenos, localizar su dirección de procedencia. Tecnologías utilizadas: Matlab, Machine Learning, DOA. <span ><a href=\"https://accedacris.ulpgc.es/handle/10553/75782\" target=\"_blank\">(Ver proyecto)</a></span> </p>",
         "experience_4": "Oct. 2017 – May., 2018. <b>Universidad de Las Palmas de Gran Canaria</b> – Prácticas de empresa en el vicerrectorado de Cultura y Sociedad con tareas tales como grabar eventos y postproducción de audio en el estudio de grabación (Entornos utlizados: Protools, Audacity).",
         "personal_1": "🎂 04/08/1994 (28 años)",

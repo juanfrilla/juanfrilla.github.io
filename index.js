@@ -28,7 +28,7 @@ const language = async () => {
   var isChecked = check.checked;
   const json = await loadJSON()
 
-  const navbar_ids = ["header", "about_nav", "training_nav", "addtraining_nav", "languages_nav", "experience_nav", "another_nav",
+  const navbar_ids = ["title", "header", "about_nav", "training_nav", "addtraining_nav", "languages_nav", "experience_nav", "another_nav",
     "about_head", "training_head", "addtraining_head", "languages_head", "experience_head", "another_head", "about_text",
     "training_text", "languages_text", "another_text_1", "another_text_2", "another_text_3", "another_text_4", "another_text_5", "download_cv",
     "experience_1", "experience_2", "experience_3", "experience_4", "personal_1", "personal_2", "add_training_text", "add_training_desc_1",
@@ -50,14 +50,14 @@ check.addEventListener("click", language);
 // Si se refresca la página te lleva al inicio
 const pageAccessedByReload = (
   (window.performance.navigation && window.performance.navigation.type === 1) ||
-    window.performance
-      .getEntriesByType('navigation')
-      .map((nav) => nav.type)
-      .includes('reload')
+  window.performance
+    .getEntriesByType('navigation')
+    .map((nav) => nav.type)
+    .includes('reload')
 );
 const url = window.location.href
 console.log(url)
-if (pageAccessedByReload === true){
+if (pageAccessedByReload === true) {
   const result = url.substring(0, url.lastIndexOf('/'))
 
   window.location.href = result;

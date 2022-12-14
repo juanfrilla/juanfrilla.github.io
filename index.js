@@ -25,9 +25,10 @@ const loadJSON = async () => {
 }
 
 
-var switcher = document.querySelector(".switcher");
-const language = async () => {
-  var isSwitched = switcher.checked;
+var check = document.querySelector(".check");
+
+async function language(){
+  var isSwitched = check.checked;
   const json = await loadJSON()
 
   const navbar_ids = ["title", "header", "about_nav", "training_nav", "addtraining_nav", "languages_nav", "experience_nav", "another_nav",
@@ -46,5 +47,5 @@ const language = async () => {
     }
   }
 }
-switcher.addEventListener("click", language);
+check.addEventListener("click", language);
 

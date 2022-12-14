@@ -16,14 +16,14 @@ color: #fff;
 position:relative;
 }
 
-.check{
+.switcher{
 position: relative;
 width: 40px;
 margin-left: 5px;
 margin-right: 5px;
 
 }
-.check::before{
+.switcher::before{
 content: '';
 position: absolute;
 width: 40px;
@@ -32,7 +32,7 @@ background: #fff;
 border-radius: 25px;
 }
 
-.check::after{
+.switcher::after{
 content:'';
 position:absolute;
 width: 20px;
@@ -44,12 +44,12 @@ border: 2px solid #333;
 box-sizing: border-box;
 }
 
-.check:checked:after{
+.switcher:checked:after{
 left: 20px;
 border: 2px solid #00a1ff;
 }
 
-.check:checked:before{
+.switcher:checked:before{
 background: #00a1ff;
 
 }

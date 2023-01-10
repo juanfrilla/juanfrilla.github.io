@@ -57,14 +57,17 @@ a {
 
 /* Media queries */
 
-@media screen and (min-width: 769px) and (max-width: 992px) {
-  .card-img {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+@media screen and (max-width: 420px) {
+  body {
+    font-size: 10px;
+  }
+
+  h4 {
+    font-size: 1.2rem;
   }
 }
+
+
 
 @media screen and (max-width: 768px) {
   .card-img {
@@ -75,23 +78,20 @@ a {
   }
 }
 
-@media screen and (max-width: 1199px) { /* El bootstrap sm md lg xl establece el máximo y en el media query lo que pasa antes del maximo*/
-  div.row > div.card-body > div.container > div.row > div.col-xl-3 {
-    font-size: 13px;
-  }
-  div.card-body > div.container {
-    display: flex;
-    align-items: center;
-  }
 
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .card-img {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 }
 
-@media screen and (max-width: 420px) {
-  body {
+
+@media screen and (max-width: 1062px) {
+  a.nav-link {
     font-size: 10px;
-  }
-  h4 {
-    font-size: 1.2rem;
   }
 }
 
@@ -102,8 +102,19 @@ a {
   }
 }
 
-@media screen and (max-width: 1062px) {
-  a.nav-link {
-    font-size: 10px;
+
+
+
+@media screen and (max-width: 1199px) {
+
+  /* El bootstrap sm md lg xl establece el máximo y en el media query lo que pasa antes del maximo*/
+  div.row>div.card-body>div.container>div.row>div.col-xl-3 {
+    font-size: 13px;
   }
+
+  div.card-body>div.container {
+    display: flex;
+    align-items: center;
+  }
+
 }

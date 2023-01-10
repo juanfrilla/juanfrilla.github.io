@@ -1,3 +1,24 @@
+// Calculate current age
+const currentAge = () => {
+  var today = new Date();
+  var birthDate = new Date('1994-08-04');
+  var age = today.getFullYear() - birthDate.getFullYear();
+  var m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+  }
+  return age;
+}
+document.getElementById('current-age').textContent = currentAge();
+
+// Calculate current age
+const currentYear = () => {
+  return new Date().getFullYear() 
+}
+document.getElementById('current-year').textContent = currentYear();
+
+
+// Scroll to section on click
 const navLinks = document.querySelectorAll("a");
 navLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
@@ -16,7 +37,7 @@ navLinks.forEach(function (link) {
   });
 });
 
-
+// Switch language
 const loadJSON = async () => {
   const response = await fetch("./assets/lang.json");
   const json = await response.json();
@@ -27,7 +48,7 @@ const loadJSON = async () => {
 
 var check = document.querySelector(".check");
 
-async function language(){
+async function language() {
   var isSwitched = check.checked;
   const json = await loadJSON()
 
@@ -48,4 +69,5 @@ async function language(){
   }
 }
 check.addEventListener("click", language);
+
 

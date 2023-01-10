@@ -3,25 +3,6 @@ body {
   font-size: 14px;
 }
 
-@media (max-width: 992px) {
-  .card-img {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-}
-
-@media (max-width: 768px) {
-  .card-img {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-}
-
-
 a {
   text-decoration: none;
 }
@@ -73,3 +54,49 @@ a {
   background: #00a1ff;
 
 }
+
+div#emoji{
+  background-color:#000; 
+}
+/* Media queries */
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .card-img {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-img {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+/* @media (max-width: 576){
+  /* div.row > div.card-body > div.container > div.row > div.col-sm-3 {
+    font-size: 8px;
+  } 
+  body {
+    background-color: coral;
+  }
+} */
+
+@media screen and (max-width: 1199px) { /* El bootstrap sm md lg xl establece el máximo y en el media query lo que pasa antes del maximo*/
+  div.row > div.card-body > div.container > div.row > div.col-xl-3 {
+    font-size: 13px;
+  }
+
+
+  div.card-body > div.container {
+    display: flex;
+    align-items: center;
+  }
+
+}
+

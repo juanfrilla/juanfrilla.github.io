@@ -5,7 +5,7 @@ const currentAge = () => {
   var age = today.getFullYear() - birthDate.getFullYear();
   var m = today.getMonth() - birthDate.getMonth();
   if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-      age--;
+    age--;
   }
   return age;
 }
@@ -13,7 +13,7 @@ document.getElementById('current-age').textContent = currentAge();
 
 // Calculate current age
 const currentYear = () => {
-  return new Date().getFullYear() 
+  return new Date().getFullYear()
 }
 document.getElementById('current-year').textContent = currentYear();
 
@@ -54,7 +54,7 @@ async function language() {
 
   const navbar_ids = ["title", "header", "about_nav", "training_nav", "addtraining_nav", "languages_nav", "experience_nav", "another_nav",
     "about_head", "training_head", "addtraining_head", "languages_head", "experience_head", "another_head", "about_text",
-    "training_text", "languages_text", "another_text_1", "another_text_2", "another_text_3", "another_text_4", "another_text_5", "download_cv",
+    "training_text", "languages_text", "another_text_1", "another_text_2", "another_text_3", "another_text_4", "another_text_5", "another_text_6", "download_cv",
     "experience_1", "experience_2", "experience_3", "experience_4", "personal_1", "personal_2", "add_training_text", "add_training_desc_1",
     "add_training_desc_2", "add_training_desc_3", "add_training_desc_4", "add_training_desc_5", "add_training_desc_6", "add_training_desc_7"]
 

@@ -20,6 +20,7 @@ document.getElementById('current-year').textContent = currentYear();
 
 // Scroll to section on click
 const navLinks = document.querySelectorAll("a");
+
 navLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
     const href = e.target.getAttribute("href");

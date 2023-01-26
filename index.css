@@ -55,6 +55,15 @@ a {
 
 }
 
+
+#home, #about, #training, #addtraining, #languages, #experience, #another {
+  scroll-margin-top: 100px;
+}
+
+
+
+
+
 /* Media queries */
 
 @media screen and (max-width: 420px) {

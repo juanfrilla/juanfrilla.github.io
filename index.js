@@ -29,7 +29,7 @@ navLinks.forEach(function (link) {
       const target = document.getElementById(attr);
       target.scrollIntoView({
         behavior: "smooth",
-        block: "center"
+        block: "start"
       });
       const url = window.location.href
       history.pushState(null, null, url);

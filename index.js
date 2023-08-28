@@ -49,7 +49,7 @@ const loadJSON = async () => {
 
 var check = document.querySelector(".check");
 
-async function language() {
+async function switch_language() {
   var isSwitched = check.checked;
   const json = await loadJSON()
 
@@ -68,7 +68,11 @@ async function language() {
       document.getElementById(navbar_ids[id]).innerHTML = json['es'][navbar_ids[id]]
     }
   }
+    // Update the displayed age and years
+    document.getElementById('current-age').textContent = currentAge();
+    document.getElementById('current-year').textContent = currentYear();
+
 }
-check.addEventListener("click", language);
+check.addEventListener("click", switch_language);
 
 

@@ -1,5 +1,22 @@
 {
+  "scripts": {
+    "start": "node live-server.js"
+  },
   "dependencies": {
     "live-server": "^1.2.2"
-  }
+  },
+  "name": "juanfrilla.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanfrilla/juanfrilla.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanfrilla/juanfrilla.github.io/issues"
+  },
+  "homepage": "https://github.com/juanfrilla/juanfrilla.github.io#readme",
+  "description": ""
 }

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script type="module" src="./index.js"></script>
+  <script type="module" src="./index.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -76,12 +76,12 @@
     <section class="card mt-5 border-0" id="home">
       <div class="row">
         <div class="card-body">
-          <h4 class="card-title text-center" id="header">Juan Francisco Martín Rodríguez - Desarrollador Back End</h4>
+          <h4 class="card-title text-center" id="header">Juan Francisco Martín Rodríguez - Desarrollador Python</h4>
           <hr color="black">
           <div class="container">
             <div class="row ">
               <div class="col-xl-3 col-sm-6 col-xs-12">
-                <span id="emoji">📞</span>+__-______
+                <span id="emoji">📞</span>+34-683593896
               </div>
               <div class="col-xl-3 col-sm-6 col-xs-12">
                 <span id="emoji">📧</span>juanframaro@gmail.com
@@ -137,38 +137,91 @@
           <h4 class="card-title" id="experience_head">Experiencia</h4>
           <hr color="black">
           <ul>
-            <li>
-              <p class="card-text text-justify mb-2" id="experience_1">Mar. 2022 – Dic. 2022. <b>Tu Calendi</b> –
-                Desarrollador Back-end, trabajé en equipo con otro compañero realizando el desarrollo y desplegué de la
-                API usando el framework de Python FastAPI, además de MariaDB, Docker, Linux, Git y Plesk. <span><a
-                    href="https://www.tucalendi.com/es/" target="_blank">(https://www.tucalendi.com/es/)</a></span></p>
+            <li  id="experience_5">
+              <p class="card-text text-justify mb-2">Feb. 2023 – Actualidad. <b>Tirant Lo Blanch</b><span><a href="https://www.tirant.com/" target="_blank"> (https://www.tirant.com/)</a></span> – Editorial jurídica.  <br> <br>
+                 <i>Desarrollador de web Scraping/Crawling.</i> <br> Empleo 100% remoto.
+                <ul>
+                  <li>
+                    Mantenimiento de spiders ya existentes y desarrollo de nuevos.
+                    </li> 
+                    <li>
+                    Mantenimiento del "proyecto de migraciones" (es una etapa de formateo que viene después del scraping y antes de salir a producción), escrito en el framework grails (groovy).
+                  </li>
+                  <li>Buscar soluciones a problemas que surgían en las tareas mencionadas anteriormente:</li>
+                  <ul>
+                    <li>Agilizar la ejecución de spiders lentos.</li>
+                    <li> Agilizar la ejecución de los tests del proyecto de migraciones para a su vez, agilizar el desarrollo de cualquier característica en este proyecto.</li>
+                    <li>Automatizar flujos de trabajo para que el equipo sea más productivo y ágil (e.g. CI/CD con gitlab CI)</li>
+                    <li>Escrapear páginas con medidas de seguridad fuertes (cloudflare, tokens, cookies, renderizado de páginas con javascript...)</li>
+                    <li>Implementación de Selenium-Grid mediante Docker para el uso de navegadores por parte de los spiders de manera simultanea.</li>
+                    <li>Rotación de proxies. </li>
+                  </ul>
+                </ul>
+                Tecnologías utilizadas:  Scrapy (framework de Python) · Grails · MongoDB · Git · Linux · Docker · Gitlab CI · Amazon Web Services (AWS)
+                </p>
             </li>
-            <li>
-              <p class="card-text text-justify mb-2" id="experience_2">Mar. – Sept. 2021. <b>Ayuntamiento de Tías</b> –
-                Técnico Informático ofreciendo soporte a los empleados (configuración de equipos, reparación de PCS,
-                formateo, recuperación de datos, configurar las impresoras y escáneres, puesta a punto de Microsoft 365
-                y Windows 10, migración de correos de POP a IMAP...). Apoyo al catastro automatizando descargas con
-                Python y Selenium para integrarlos en el programa QGIS. <span><a
-                    href="https://www.ayuntamientodetias.es/"
-                    target="_blank">(https://www.ayuntamientodetias.es/)</a></span></p>
+            <li  id="experience_4">
+              <p class="card-text text-justify mb-2">Mar. 2022 – Dic. 2022. <b>Tu Calendi</b> <span><a
+                href="https://www.tucalendi.com/es/" target="_blank">(https://www.tucalendi.com/es/)</a></span> – Sistema para la gestión de reuniones online. <br> <br>
+                <i>Desarrollador Back-end.</i> <br> Empleo 100% remoto.
+                <ul>
+                  <li>
+                    Migración de la API escrita en PHP hacia Python usando el framework FastAPI, y despliegue.
+                  </li>
+                  <li>
+                    Integración de la aplicación con asistentes de voz como Alexa (diseño de la conversación, desarrollo...)
+                  </li>
+                </ul>
+                Tecnologías utilizadas: FastAPI (framework de Python) · MariaDB · Linux · Git · Plesk · PHP · Docker · Github Actions 
+                </p>
             </li>
-            <li>
-              <p class="card-text text-justify mb-2" id="experience_3"> Febr. 2018 – Jul. 2019. <b>Trabajo de Fin de
-                  Grado </b> – Proyecto “Diseño y Desarrollo en Entorno Matlab de un Sistema para la Detección y
-                Localización de
-                Eventos Sonoros Atmosféricos Singulares”. – Se han combinado técnicas de Machine Learning y DOA
-                (Localización de la Dirección de Procedencia) para detectar y clasificar eventos sonoros como lluvia o
-                sonido ambiente y cuando se trata de truenos, localizar su dirección de procedencia. Tecnologías
-                utilizadas: Matlab, Machine Learning, DOA.
-                <span><a href="https://accedacris.ulpgc.es/handle/10553/75782" target="_blank">(Ver
-                    proyecto)</a></span>
+            <li id="experience_3">
+              <p class="card-text text-justify mb-2" >Mar. 2021 – Sept. 2021. <b>Ayuntamiento de Tías</b> <span><a
+                href="https://www.ayuntamientodetias.es/"
+                target="_blank">(https://www.ayuntamientodetias.es/)</a></span><br> <br>
+                <i>Técnico Informático.</i> <br> Empleo presencial.
+                <ul> 
+                  <li>
+                    Ofrecer soporte a los empleados (configuración de equipos, reparación de PCS,
+                    formateo, recuperación de datos, configurar las impresoras y escáneres, puesta a punto de Microsoft 365
+                    y Windows 10, migración de correos de POP a IMAP...).
+                  </li>
+                  <li>
+                    Apoyar al catastro automatizando descargas con Python y Selenium para integrarlos en el programa QGIS.
+                  </li>
+                </ul>
+                </p>
+            </li>
+            <li id="experience_2">
+              <p class="card-text text-justify mb-2" > Febr. 2018 – Jul. 2019. 
+                <b> Universidad de Las Palmas de Gran Canaria</b><span><a href="https://accedacris.ulpgc.es/handle/10553/75782" target="_blank"> (Ver
+                  proyecto)</a></span> <br> <br>
+                <i> Trabajo de Fin de Grado</i>
+                <ul>
+                  <li>
+                    Diseñar y desarrollar en entorno Matlab un sistema metorológico que detecta y localiza eventos sonoros atmosféricos singulares.
+                  </li>
+                  <li>
+                    Combinar técnicas de Machine Learning y DOA (Localización de la Dirección de Procedencia) para detectar y clasificar eventos sonoros como lluvia o sonido ambiente y cuando se trata de truenos,localizar su dirección de procedencia.
+                  </li>
+                </ul>
+                 Tecnologías utilizadas: Matlab · Machine Learning · DOA (Direction of Arrival) · Audacity
               </p>
             </li>
-            <li>
-              <p class="card-text text-justify mb-2" id="experience_4">Oct. 2017 – May. 2018. <b>Universidad de Las
-                  Palmas de Gran Canaria</b> – Prácticas de
-                empresa en el vicerrectorado de Cultura y Sociedad con tareas tales como grabar eventos y
-                postproducción de audio en el estudio de grabación (Entornos utlizados: Protools, Audacity).</p>
+            <li id="experience_1">
+              <p class="card-text text-justify mb-2" >Oct. 2017 – May. 2018. <b>Universidad de Las
+                  Palmas de Gran Canaria (vicerrectorado de Cultura y Sociedad)</b><br> <br>
+                  <i>Técnico de Sonido. Prácticas de empresa</i>
+                  <ul>
+                    <li>
+                      Grabación de eventos in-situ.
+                    </li>
+                    <li>
+                      Postproducción de audio en el estudio de grabación de la Escuela de Ingeniería de Telecomunicación y Electrónica (EITE).
+                    </li>
+                  </ul>
+                Herramientas utlizadas: Protools · Audacity
+              </p>
             </li>
           </ul>
         </div>
@@ -184,13 +237,12 @@
             <li>
               <p class="card-text text-justify" id="training_text">
                 Sept. 2012 - Jul. 2019. <b>Universidad de Las Palmas de Gran Canaria (ULPGC)</b>: Grado en Ingeniería
-                de
-                Telecomunicaciones con mención en Sonido e Imagen. Estudié todo lo relacionado con la transmisión y
+                de Telecomunicaciones con mención en Sonido e Imagen. Estudié todo lo relacionado con la transmisión y
                 recepción de información, desde la electrónica, los sistemas y medios por los que se transmite la
                 información, las ondas y señales, además de las redes y los sistemas telemáticos.
-                <br> Java, fue el lenguaje
-                principal en las asignaturas de programación, Matlab, en las asignaturas relacionadas con las señales y
-                C y ensamblador, en las asignaturas relacionadas con la electrónica.
+                <br> 
+                Tecnologías utilizadas: Java · MySQL · HTML · CSS · C · Ensamblador · Matlab 
+                <!-- POner todas las tecnologías  TODO  -->
               </p>
             </li>
           </ul>
@@ -276,7 +328,7 @@
                   ✔Abierto al teletrabajo.
                 </div>
                 <div class="col-xl-4 col-sm-6" id="another_text_6">
-                  ✔Posibilidad de asistir a la oficina 1-2 veces al mes.
+                  ✔Posibilidad de asistir a la oficina 1 vez al año, asumiendo el costo del viaje.
                 </div>
               </div>
             </div>

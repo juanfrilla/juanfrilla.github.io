@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 14px;
 }
 
@@ -21,11 +21,10 @@ a {
   width: 40px;
   margin-left: 5px;
   margin-right: 5px;
-
 }
 
 .check::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 40px;
   height: 20px;
@@ -34,7 +33,7 @@ a {
 }
 
 .check::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 20px;
   height: 20px;
@@ -52,17 +51,17 @@ a {
 
 .check:checked:before {
   background: #00a1ff;
-
 }
 
-
-#home, #about, #training, #addtraining, #languages, #experience, #another {
+#home,
+#about,
+#training,
+#addtraining,
+#languages,
+#experience,
+#another {
   scroll-margin-top: 100px;
 }
-
-
-
-
 
 /* Media queries */
 
@@ -76,8 +75,6 @@ a {
   }
 }
 
-
-
 @media screen and (max-width: 768px) {
   .card-img {
     width: 70%;
@@ -86,7 +83,6 @@ a {
     display: block;
   }
 }
-
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
   .card-img {
@@ -97,13 +93,11 @@ a {
   }
 }
 
-
 @media screen and (max-width: 1062px) {
   a.nav-link {
     font-size: 10px;
   }
 }
-
 
 @media screen and (max-width: 1158px) {
   a.nav-link {
@@ -111,19 +105,14 @@ a {
   }
 }
 
-
-
-
 @media screen and (max-width: 1199px) {
-
   /* El bootstrap sm md lg xl establece el máximo y en el media query lo que pasa antes del maximo*/
-  div.row>div.card-body>div.container>div.row>div.col-xl-3 {
+  div.row > div.card-body > div.container > div.row > div.col-xl-3 {
     font-size: 13px;
   }
 
-  div.card-body>div.container {
+  div.card-body > div.container {
     display: flex;
     align-items: center;
   }
-
 }

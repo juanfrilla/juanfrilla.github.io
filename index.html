@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
   <script type="module" src="./index.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -17,7 +17,6 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +25,6 @@
   <link rel="icon" href="./assets/pIMG_9795.jpg">
   <title id="title">JF Español</title>
 </head>
-
 <body>
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <li class="nav-item p-2 d-flex justify-content-end mr-3">
@@ -45,7 +43,6 @@
           <li class="about nav-item p-2">
             <a class="nav-link" id="about_nav" href="#about" data-toggle="collapse"
               data-target=".navbar-collapse.show">Sobre mí <span class="sr-only">(current)</span></a>
-            <!--active-->
           </li>
           <li class="experience nav-item p-2">
             <a class="nav-link" id="experience_nav" href="#experience" data-toggle="collapse"
@@ -73,11 +70,11 @@
   </nav>
   <br>
   <div class="container justify-content-center">
+    <div id="content-to-download">
     <section class="card mt-5 border-0" id="home">
+      <h4 class="text-center" id="header">Juan Francisco Martín Rodríguez - Desarrollador Python</h4>
+      <hr color="black">
       <div class="row">
-        <div class="card-body">
-          <h4 class="card-title text-center" id="header">Juan Francisco Martín Rodríguez - Desarrollador Python</h4>
-          <hr color="black">
           <div class="container">
             <div class="row ">
               <div class="col-xl-3 col-sm-6 col-xs-12">
@@ -101,21 +98,20 @@
               <div class="col-xl-3 col-xs-12 d-sm-none d-xl-block">
               </div>
               <div class="col-xl-3 col-xs-12 d-sm-none d-xl-block">
-              </div> <!-- https://www.codeply.com/go/zyTOcNXo0m  TODO  -->
+              </div>
               <div class="col-xl-3 col-sm-6 col-xs-12" id="personal_2">
                 <span id="emoji">📍</span> Teguise, Lanzarote, España
               </div>
             </div>
           </div>
-        </div>
       </div>
     </section>
-    <section class="card mt-4 border-dark" id="about">
+    <section class="card mt-4 p-3 border-dark" id="about">
+      <h4 class="card-title" id="about_head">Sobre mí</h4>
+      <hr color="black">
       <div class="row">
         <div class="col-lg-9">
           <div class="card-body">
-            <h4 class="card-title" id="about_head">Sobre mí</h4>
-            <hr color="black">
             <p class="card-text font-italic text-justify" id="about_text">
               "Natural de Lanzarote, en mi familia dicen que soy inteligente, pues aprendí a leer y la tabla del 2 con
               cinco años. Soy de ciencias y tecnología, aunque mi curiosidad me ha llevado a leerme varios libros de
@@ -132,10 +128,10 @@
       </div>
     </section>
     <section class="card mt-4 border-dark p-3" id="experience">
+      <h4 class="card-title" id="experience_head">Experiencia</h4>
+      <hr color="black">
       <div class="row">
         <div class="card-body">
-          <h4 class="card-title" id="experience_head">Experiencia</h4>
-          <hr color="black">
           <ul>
             <li  id="experience_5">
               <p class="card-text text-justify mb-2">Feb. 2023 – Actualidad. <b>Tirant Lo Blanch</b><span><a href="https://www.tirant.com/" target="_blank"> (https://www.tirant.com/)</a></span> – Editorial jurídica.  <br> <br>
@@ -154,10 +150,11 @@
                     <li>Automatizar flujos de trabajo para que el equipo sea más productivo y ágil (e.g. CI/CD con gitlab CI)</li>
                     <li>Escrapear páginas con medidas de seguridad fuertes (cloudflare, tokens, cookies, renderizado de páginas con javascript...)</li>
                     <li>Implementación de Selenium-Grid mediante Docker para el uso de navegadores por parte de los spiders de manera simultanea.</li>
-                    <li>Rotación de proxies. </li>
+                    <li>Rotación de proxies y headers.</li>
+                    <li>Extraer información de cualquier archivo de texto entre los que se encuentran los formatos pdf, doc y docx.</li>
                   </ul>
                 </ul>
-                Tecnologías utilizadas:  Scrapy (framework de Python) · Grails · MongoDB · Git · Linux · Docker · Gitlab CI · Amazon Web Services (AWS)
+                Tecnologías utilizadas:  Scrapy (framework de Python) · BeautifulSoup · Requests · Grails · MongoDB · Git · Linux · Docker · Gitlab CI · Amazon Web Services (AWS)
                 </p>
             </li>
             <li  id="experience_4">
@@ -229,10 +226,10 @@
     </section>
 
     <section class="card mt-4 border-dark p-3" id="training">
+      <h4 class="card-title" id="training_head">Formación</h4>
+      <hr color="black">
       <div class="row">
         <div class="card-body">
-          <h4 class="card-title" id="training_head">Formación</h4>
-          <hr color="black">
           <ul>
             <li>
               <p class="card-text text-justify" id="training_text">
@@ -242,7 +239,6 @@
                 información, las ondas y señales, además de las redes y los sistemas telemáticos.
                 <br> 
                 Tecnologías utilizadas: Java · MySQL · HTML · CSS · C · Ensamblador · Matlab 
-                <!-- POner todas las tecnologías  TODO  -->
               </p>
             </li>
           </ul>
@@ -251,10 +247,10 @@
     </section>
 
     <section class="card mt-4 border-dark p-3" id="addtraining">
+      <h4 class="card-title" id="addtraining_head">Formación complementaria</h4>
+      <hr color="black">
       <div class="row">
         <div class="card-body">
-          <h4 class="card-title" id="addtraining_head">Formación complementaria</h4>
-          <hr color="black">
           <ul>
             <li>
               <p class="card-text" id="add_training_text">
@@ -291,10 +287,10 @@
       </div>
     </section>
     <section class="card mt-4 border-dark p-3" id="languages">
+      <h4 class="card-title" id="languages_head">Idiomas</h4>
+      <hr color="black">
       <div class="row">
         <div class="card-body">
-          <h4 class="card-title" id="languages_head">Idiomas</h4>
-          <hr color="black">
           <ul>
             <li>
               <p class="card-text text-justify" id="languages_text">
@@ -304,11 +300,11 @@
         </div>
       </div>
     </section>
-    <div class="card mt-4 mb-4 border-dark p-3">
-      <section class="row" id="another">
+    <section class="card mt-4 mb-4 border-dark p-3">
+      <h4 class="card-title" id="another_head">Información adicional</h4>
+      <hr color="black">
+      <div class="row" id="another">
         <div class="card-body">
-          <h4 class="card-title" id="another_head">Información adicional</h4>
-          <hr color="black">
           <div class="container">
             <div class="container">
               <div class="row ">
@@ -334,26 +330,21 @@
             </div>
           </div>
         </div>
+      </div>
       </section>
     </div>
     <div class="card border-0">
       <div class="card-body text-center">
-        <a href="https://drive.google.com/file/d/1ME-pDlux_yUJtQHQ94dqRD7LMZZ5BBeC/view?usp=share_link"
+        <a href=""
           class="btn btn-success" target="_blank" id="download_cv"><i class="fa fa-download"></i>¡Descargar mi
           curriculum!</a>
       </div>
     </div>
   </div>
-  <!-- Footer -->
   <footer class="page-footer font-small blue pt-4 bg-dark text-white">
-    <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© <span id="current-year">2022</span> Copyright:
       <a href="https://juanfrilla.github.io"> juanfrilla</a>
     </div>
-    <!-- Copyright -->
-
   </footer>
-  <!-- Footer -->
 </body>
-
 </html>

@@ -16,7 +16,6 @@ const currentYear = () => {
 function modifyClasses() {
   const elements = document.querySelectorAll("h4, div, section");
   elements.forEach((element) => {
-    // Store original classes
     if (!element.originalClasses) {
       element.originalClasses = [...element.classList];
     }
@@ -75,23 +74,7 @@ function modifyClasses() {
   });
 }
 
-function downloadPDF() {
-  const content = document.getElementById("content-to-download");
-  if (!content) {
-    console.error("Element not found!");
-    return;
-  }
-
-  // Modify classes before generating the PDF
-  modifyClasses();
-  content.classList.remove("border-dark");
-
-  // Style adjustments for the PDF
-  content.style.margin = "0";
-  content.style.padding = "0";
-  document.body.style.fontSize = "8px";
-  document.body.style.fontFamily = "Arial";
-
+function modifyH4() {
   const h4Elements = document.querySelectorAll("h4");
   const replacedElements = [];
 
@@ -108,7 +91,9 @@ function downloadPDF() {
     h4.replaceWith(div);
     replacedElements.push({ original: h4, new: div });
   });
+}
 
+function modifyHR() {
   const hrElements = document.querySelectorAll("hr");
   hrElements.forEach((hr) => {
     hr.style.margin = "0";
@@ -116,12 +101,32 @@ function downloadPDF() {
     hr.style.border = "none";
     hr.style.borderTop = "1px solid black";
   });
+}
 
+function modifyImg() {
   const img = document.querySelector("img");
   if (img) {
     img.style.width = "100px";
     img.style.height = "auto";
   }
+}
+
+function downloadPDF() {
+  modifyClasses();
+  modifyH4();
+  modifyHR();
+  modifyImg();
+
+  const content = document.getElementById("content-to-download");
+  if (!content) {
+    console.error("Element not found!");
+    return;
+  }
+  content.classList.remove("border-dark");
+  content.style.margin = "0";
+  content.style.padding = "0";
+  document.body.style.fontSize = "8px";
+  document.body.style.fontFamily = "Arial";
 
   const options = {
     margin: 0,
@@ -146,7 +151,7 @@ function downloadPDF() {
     .set(options)
     .save()
     .then(() => {
-      //window.location.reload();
+      window.location.reload();
     })
     .catch((err) => {
       console.error("Error generating PDF:", err);
@@ -174,29 +179,47 @@ navLinks.forEach(function (link) {
   });
 });
 
+
 const loadJSON = async () => {
   const response = await fetch("./assets/lang.json");
   const json = await response.json();
   return json;
 };
 
-var check = document.querySelector(".check");
-
-async function switch_language() {
-  var isSwitched = check.checked;
+async function switchLanguage(preloadLanguage = null) {
+  var check = document.querySelector(".check");
   const json_data = await loadJSON();
   const id_nodes = document.querySelectorAll("*[id]");
   const navbar_ids = Array.from(id_nodes).map((element) => element.id);
-  var language = isSwitched ? "en" : "es";
+
+  var language = preloadLanguage || (check.checked ? "en" : "es");
 
   for (const value of navbar_ids) {
     if (json_data[language][value] !== undefined) {
       document.getElementById(value).innerHTML = json_data[language][value];
     }
   }
+
   document.getElementById("current-age").textContent = currentAge();
   document.getElementById("current-year").textContent = currentYear();
 }
-check.addEventListener("click", switch_language);
+
+async function preloadDefaultLanguage() {
+  const userPreferredLanguage = navigator.language || navigator.userLanguage;
+  
+  let defaultLanguage = "es";
+  if (userPreferredLanguage.startsWith("en")) {
+    defaultLanguage = "en";
+  }
+
+  await switchLanguage(defaultLanguage);
+}
+
+document.querySelector(".check").addEventListener("change", () => {
+  switchLanguage();
+});
+
+
+window.addEventListener("load", preloadDefaultLanguage);
 document.getElementById("current-age").textContent = currentAge();
 document.getElementById("current-year").textContent = currentYear();

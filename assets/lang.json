@@ -1,7 +1,7 @@
 {
   "en": {
     "title": "JF English",
-    "header": "Juan Francisco Martín Rodríguez - Python Developer",
+    "header": "Diego Martín Rodríguez - Python Developer",
     "about_nav": "About",
     "training_nav": "Training",
     "addtraining_nav": "Additional Training",
@@ -42,7 +42,7 @@
   },
   "es": {
     "title": "JF Español",
-    "header": "Juan Francisco Martin Rodriguez - Desarrollador Python",
+    "header": "Diego Martin Rodriguez - Desarrollador Python",
     "about_nav": "Sobre mí",
     "training_nav": "Formación",
     "addtraining_nav": "Formación Adicional",

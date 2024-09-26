@@ -111,7 +111,8 @@ function modifyImg() {
   }
 }
 
-function downloadPDF() {
+function downloadPDF(event) {
+  event.preventDefault();
   modifyClasses();
   modifyH4();
   modifyHR();
@@ -179,7 +180,6 @@ navLinks.forEach(function (link) {
   });
 });
 
-
 const loadJSON = async () => {
   const response = await fetch("./assets/lang.json");
   const json = await response.json();
@@ -206,7 +206,7 @@ async function switchLanguage(preloadLanguage = null) {
 
 async function preloadDefaultLanguage() {
   const userPreferredLanguage = navigator.language || navigator.userLanguage;
-  
+
   let defaultLanguage = "es";
   if (userPreferredLanguage.startsWith("en")) {
     defaultLanguage = "en";
@@ -218,7 +218,6 @@ async function preloadDefaultLanguage() {
 document.querySelector(".check").addEventListener("change", () => {
   switchLanguage();
 });
-
 
 window.addEventListener("load", preloadDefaultLanguage);
 document.getElementById("current-age").textContent = currentAge();

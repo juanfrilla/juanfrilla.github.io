@@ -3,6 +3,8 @@
     "start": "node live-server.js"
   },
   "dependencies": {
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.2",
     "live-server": "^1.2.2"
   },
   "name": "juanfrilla.github.io",

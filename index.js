@@ -29,9 +29,9 @@ function modifyClasses() {
           if (className.startsWith("card-title")) {
             classesToRemove.push(className);
           }
-          if (className.startsWith("mt-4")) {
-            classesToReplace.push({ old: className, new: "ml-3" });
-          }
+          // if (className.startsWith("mt-4")) {
+          //   classesToReplace.push({ old: className, new: "ml-3" });
+          // }
         });
         break;
 
@@ -39,8 +39,16 @@ function modifyClasses() {
         element.classList.forEach((className) => {
           if (className.startsWith("card-body")) {
             classesToRemove.push(className);
+            classesToReplace.push("card-body", "p-0"); // Add classes separately
+          }
+          if (element.id === "personal_data") {
+            classesToReplace.push({ old: className, new: "mb-3" });
           }
         });
+        const aboutText = element.querySelector("p#about_text");
+        if (aboutText) {
+          aboutText.classList.add("pl-3");
+        }
         break;
 
       case "SECTION":
@@ -49,7 +57,8 @@ function modifyClasses() {
             classesToRemove.push(className);
           }
           if (className.includes("p-3")) {
-            classesToReplace.push({ old: className, new: "pr-3" });
+            //classesToReplace.push({ old: className, new: "pr-3" });
+            classesToRemove.push(className);
           }
           if (className.includes("border-dark")) {
             classesToReplace.push({ old: className, new: "border-0" });
@@ -81,13 +90,11 @@ function modifyH4() {
   h4Elements.forEach((h4) => {
     const div = document.createElement("div");
     div.innerHTML = h4.innerHTML;
-    div.style.fontSize = "7px";
+    div.style.fontSize = "12px";
     div.style.fontWeight = "bold";
     div.className = h4.className;
     div.id = h4.id;
-    if (div.id !== "about_head") {
-      div.classList.add("ml-3");
-    }
+    div.classList.add("ml-3");
     h4.replaceWith(div);
     replacedElements.push({ original: h4, new: div });
   });
@@ -96,9 +103,9 @@ function modifyH4() {
 function modifyHR() {
   const hrElements = document.querySelectorAll("hr");
   hrElements.forEach((hr) => {
-    hr.style.margin = "0";
+    //hr.style.margin = "0";
     hr.style.width = "100%";
-    hr.style.border = "none";
+    //hr.style.border = "none";
     hr.style.borderTop = "1px solid black";
   });
 }
@@ -106,7 +113,7 @@ function modifyHR() {
 function modifyImg() {
   const img = document.querySelector("img");
   if (img) {
-    img.style.width = "100px";
+    img.style.width = "150px";
     img.style.height = "auto";
   }
 }
@@ -124,34 +131,31 @@ function downloadPDF(event) {
     return;
   }
   content.classList.remove("border-dark");
-  content.style.margin = "0";
-  content.style.padding = "0";
-  document.body.style.fontSize = "8px";
+  //content.style.margin = "0";
+  //content.style.padding = "0";
+  document.body.style.fontSize = "9px";
   document.body.style.fontFamily = "Arial";
+  const { jsPDF } = window.jspdf;
+  html2canvas(content, {
+    scale: 4,
+    useCORS: true,
+    letterRendering: true,
+  })
+    .then((canvas) => {
+      const imgData = canvas.toDataURL("image/png", 1.0);
+      const pdf = new jsPDF({
+        unit: "in",
+        format: "a4",
+        orientation: "portrait",
+        compress: true,
+      });
 
-  const options = {
-    margin: 0,
-    filename: "CV.pdf",
-    image: { type: "png", quality: 1 },
-    html2canvas: {
-      scale: 4,
-      useCORS: true,
-      letterRendering: true,
-    },
-    jsPDF: {
-      unit: "in",
-      format: "a4",
-      orientation: "portrait",
-      dpi: 400,
-      compress: true,
-    },
-  };
+      const imgWidth = pdf.internal.pageSize.getWidth();
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
-  html2pdf()
-    .from(content)
-    .set(options)
-    .save()
-    .then(() => {
+      pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+      pdf.save("CV.pdf");
+
       window.location.reload();
     })
     .catch((err) => {

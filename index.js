@@ -37,13 +37,18 @@ function modifyClasses() {
 
       case "DIV":
         element.classList.forEach((className) => {
-          // if (className.startsWith("card-body")) {
-          //   classesToRemove.push(className);
-          // }
+          if (className.startsWith("card-body")) {
+            classesToRemove.push(className);
+            classesToReplace.push("card-body", "p-0"); // Add classes separately
+          }
           if (element.id === "personal_data") {
             classesToReplace.push({ old: className, new: "mb-3" });
           }
         });
+        const aboutText = element.querySelector("p#about_text");
+        if (aboutText) {
+          aboutText.classList.add("pl-3");
+        }
         break;
 
       case "SECTION":
@@ -52,7 +57,8 @@ function modifyClasses() {
             classesToRemove.push(className);
           }
           if (className.includes("p-3")) {
-            classesToReplace.push({ old: className, new: "pr-3" });
+            //classesToReplace.push({ old: className, new: "pr-3" });
+            classesToRemove.push(className);
           }
           if (className.includes("border-dark")) {
             classesToReplace.push({ old: className, new: "border-0" });
@@ -98,7 +104,7 @@ function modifyHR() {
   const hrElements = document.querySelectorAll("hr");
   hrElements.forEach((hr) => {
     //hr.style.margin = "0";
-    //hr.style.width = "100%";
+    hr.style.width = "100%";
     //hr.style.border = "none";
     hr.style.borderTop = "1px solid black";
   });
@@ -127,17 +133,16 @@ function downloadPDF(event) {
   content.classList.remove("border-dark");
   //content.style.margin = "0";
   //content.style.padding = "0";
-  document.body.style.fontSize = "10px";
+  document.body.style.fontSize = "9px";
   document.body.style.fontFamily = "Arial";
   const { jsPDF } = window.jspdf;
-  // Use html2canvas to capture the content as a canvas
   html2canvas(content, {
     scale: 4,
     useCORS: true,
     letterRendering: true,
   })
     .then((canvas) => {
-      const imgData = canvas.toDataURL("image/png", 1.0); // Convert canvas to image data
+      const imgData = canvas.toDataURL("image/png", 1.0);
       const pdf = new jsPDF({
         unit: "in",
         format: "a4",
@@ -148,10 +153,10 @@ function downloadPDF(event) {
       const imgWidth = pdf.internal.pageSize.getWidth();
       const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
-      pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight); // Add image to PDF
-      pdf.save("CV.pdf"); // Save as PDF
+      pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+      pdf.save("CV.pdf");
 
-      window.location.reload(); // Reload page after download
+      window.location.reload();
     })
     .catch((err) => {
       console.error("Error generating PDF:", err);

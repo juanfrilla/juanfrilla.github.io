@@ -42,7 +42,7 @@ function modifyClasses() {
             classesToReplace.push("card-body", "p-0"); // Add classes separately
           }
           if (element.id === "personal_data") {
-            classesToReplace.push({ old: className, new: "mb-3" });
+            classesToReplace.push({ old: className, new: "mb-3 ml-3" });
           }
         });
         const aboutText = element.querySelector("p#about_text");

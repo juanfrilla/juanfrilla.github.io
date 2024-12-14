@@ -1,3 +1,16 @@
+function displayPhoneNumber(event) {
+  event.preventDefault();
+  const phoneLink = document.getElementById('phone-number');
+
+  const reversedPhoneNumber = '698395386';
+  const phoneNumber = '+34-' + reversedPhoneNumber.split('').reverse().join('');
+
+  const phoneSpan = document.createElement('span');
+  phoneSpan.innerText = phoneNumber;
+  phoneLink.parentNode.replaceChild(phoneSpan, phoneLink);
+}
+window.displayPhoneNumber = displayPhoneNumber;
+
 const currentAge = () => {
   var today = new Date();
   var birthDate = new Date("1994-08-04");

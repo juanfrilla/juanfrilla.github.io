@@ -52,23 +52,19 @@ const loadJSON = async () => {
 };
 
 async function switchLanguage(preloadLanguage = null) {
-  var check = document.querySelector(".check");
   const json_data = await loadJSON();
-  const id_nodes = document.querySelectorAll("*[id]");
-  const navbar_ids = Array.from(id_nodes).map((element) => element.id);
+  const selected = document.querySelector('.btn-check:checked');
+  const language = preloadLanguage || selected.id;
 
-  var language = preloadLanguage || (check.checked ? "en" : "es");
-
-  for (const value of navbar_ids) {
-    if (json_data[language][value] !== undefined) {
-      document.getElementById(value).innerHTML = json_data[language][value];
+  document.querySelectorAll("[id]").forEach(el => {
+    if (json_data[language][el.id] !== undefined) {
+      el.innerHTML = json_data[language][el.id];
     }
-  }
+  });
 
   document.getElementById("current-age").textContent = currentAge();
   document.getElementById("current-year").textContent = currentYear();
 }
-
 async function preloadDefaultLanguage() {
   const userPreferredLanguage = navigator.language || navigator.userLanguage;
 
@@ -76,12 +72,16 @@ async function preloadDefaultLanguage() {
   if (userPreferredLanguage.startsWith("en")) {
     defaultLanguage = "en";
   }
+  const radioToCheck = document.getElementById(defaultLanguage);
+  if (radioToCheck) radioToCheck.checked = true;
 
   await switchLanguage(defaultLanguage);
 }
 
-document.querySelector(".check").addEventListener("change", () => {
-  switchLanguage();
+document.querySelectorAll(".btn-check").forEach(radio => {
+  radio.addEventListener("change", () => {
+    switchLanguage();
+  });
 });
 
 window.addEventListener("load", preloadDefaultLanguage);

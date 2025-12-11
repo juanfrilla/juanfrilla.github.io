@@ -26,10 +26,15 @@ const currentYear = () => {
   return new Date().getFullYear();
 };
 
-const navLinks = document.querySelectorAll("a");
+// Select all navbar links
+const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+// Select the navbar collapse element
+const navbarCollapse = document.querySelector('.navbar-collapse');
 
 navLinks.forEach(function (link) {
-  link.addEventListener("click", function (e) {
+  link.addEventListener('click', function (e) {
+    // Smooth scroll functionality
     const href = e.target.getAttribute("href");
     if (href && href.includes("#")) {
       const attr = href.toString().replace("#", "");
@@ -41,6 +46,17 @@ navLinks.forEach(function (link) {
       const url = window.location.href;
       history.pushState(null, null, url);
       e.preventDefault();
+    }
+
+    // Collapse the navbar after clicking the link (for mobile)
+    if (navbarCollapse.classList.contains('show')) {
+      // Using Bootstrap's collapse API
+      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+      if (bsCollapse) {
+        bsCollapse.hide();
+      } else {
+        new bootstrap.Collapse(navbarCollapse).hide();
+      }
     }
   });
 });

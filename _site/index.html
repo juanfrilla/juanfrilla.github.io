@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Home · Juan Fran Martín</title>
+    <meta name="description"
+        content="Juan Fran Martín — Telecommunications Engineer specialized in web scraping, web security and JavaScript reverse engineering.">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -106,11 +108,23 @@
 
         main {
             max-width: 1000px;
-
             margin: 0 auto;
-
             padding: 80px 24px;
         }
+
+        .home {
+            text-align: center;
+        }
+
+        .home p {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .home .social-links {
+            justify-content: center;
+        }
+
 
         /* Typography */
 
@@ -222,8 +236,8 @@
         ul,
         ol {
             color: var(--muted);
-
-            padding-left: 24px;
+            padding-left: 0;
+            list-style-position: inside;
         }
 
         li {
@@ -246,6 +260,8 @@
             max-width: 100%;
             height: auto;
             border-radius: 8px;
+            display: block;
+            margin: 24px auto;
         }
 
         .post-image {
@@ -274,7 +290,10 @@
             }
 
             p {
-                font-size: 16px;
+                max-width: 720px;
+                margin: 0 auto 16px;
+                color: var(--muted);
+                font-size: 17px;
             }
 
         }
@@ -312,32 +331,31 @@
 
         <h1 id="hi-there">Hi there!</h1>
 
-        <p>My name is Juan Fran Martín. I studied Telecommunications Engineering at the University of Las Palmas de Gran
-            Canaria.</p>
+<p>My name is Juan Fran Martín, and I’m a Guanche, the aborigins from the Canary Islands, Spain. I studied Telecommunications Engineering, specializing in Sound and Image, at the University of Las Palmas de Gran Canaria, driven by my passion for discovering new artists and exploring new music genres.</p>
 
-        <p>I have 4+ years of experience in web scraping. Over time, I became interested in CAPTCHAs, anti-bot systems,
-            and JavaScript obfuscation.</p>
+<p>I have 4+ years of experience in web scraping. Over time, I became interested in CAPTCHAs, anti-bot systems, and JavaScript obfuscation.</p>
 
-        <p>My recent projects have focused on reverse engineering JavaScript Virtual Machine (JSVM)-based obfuscation.
-        </p>
+<p>My recent projects have focused on reverse engineering JavaScript Virtual Machine (JSVM)-based obfuscation.</p>
 
-        <p>Click here to download my <a href="https://juanfrilla.streamlit.app">resume</a>.</p>
+<p>When I’m not coding, I’m bodyboarding to relax my mind.</p>
 
-        <div class="social-links">
+<p>Click here to download my <a href="https://juanfrilla.streamlit.app">resume</a>.</p>
 
-            <a href="https://github.com/juanfrilla" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
-            </a>
+<div class="social-links">
 
-            <a href="https://www.linkedin.com/in/jfmozaga/" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
+    <a href="https://github.com/juanfrilla" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+    </a>
 
-            <a href="https://www.youtube.com/@jfmozaga" aria-label="YouTube">
-                <i class="fa-brands fa-youtube"></i>
-            </a>
+    <a href="https://www.linkedin.com/in/jfmozaga/" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+    </a>
 
-        </div>
+    <a href="https://www.youtube.com/@jfmozaga" aria-label="YouTube">
+        <i class="fa-brands fa-youtube"></i>
+    </a>
+
+</div>
 
 
     </main>

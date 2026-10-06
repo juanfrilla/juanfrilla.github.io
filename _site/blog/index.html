@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Blog · Juan Fran Martín</title>
+    <meta name="description"
+        content="Technical articles about web scraping, web security, reverse engineering and JavaScript virtual machines.">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -106,11 +108,23 @@
 
         main {
             max-width: 1000px;
-
             margin: 0 auto;
-
             padding: 80px 24px;
         }
+
+        .home {
+            text-align: center;
+        }
+
+        .home p {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .home .social-links {
+            justify-content: center;
+        }
+
 
         /* Typography */
 
@@ -222,8 +236,8 @@
         ul,
         ol {
             color: var(--muted);
-
-            padding-left: 24px;
+            padding-left: 0;
+            list-style-position: inside;
         }
 
         li {
@@ -246,6 +260,8 @@
             max-width: 100%;
             height: auto;
             border-radius: 8px;
+            display: block;
+            margin: 24px auto;
         }
 
         .post-image {
@@ -274,7 +290,10 @@
             }
 
             p {
-                font-size: 16px;
+                max-width: 720px;
+                margin: 0 auto 16px;
+                color: var(--muted);
+                font-size: 17px;
             }
 
         }
@@ -312,32 +331,21 @@
 
         <h1 id="blog">Blog</h1>
 
-        <p>Technical notes and projects about web scraping, web security, reverse engineering and JavaScript virtual
-            machines.</p>
+<p>Technical notes and projects about web scraping, web security, reverse engineering and JavaScript virtual machines.</p>
 
-        <hr />
+<hr />
 
-        <h3 id="bet365-vm-static-disassembler"><a href="/blog/bet365-vm-disassembler/">Bet365 VM Static Disassembler</a>
-        </h3>
+<h3 id="bet365-vm-static-disassembler"><a href="/blog/bet365-vm-disassembler/">Bet365 VM Static Disassembler</a></h3>
 
-        <p>A static disassembler for the Bet365 JavaScript Virtual Machine (JSVM), transforming encoded VM bytecode into
-            a human-readable representation.</p>
+<p>A static disassembler for the Bet365 JavaScript Virtual Machine (JSVM), transforming encoded VM bytecode into a human-readable representation.</p>
 
-        <p><strong>Topics:</strong> <code class="language-plaintext highlighter-rouge">Reverse Engineering</code> ·
-            <code class="language-plaintext highlighter-rouge">JavaScript</code> · <code
-                class="language-plaintext highlighter-rouge">JSVM</code> · <code
-                class="language-plaintext highlighter-rouge">Obfuscation</code></p>
+<p><strong>Topics:</strong> <code class="language-plaintext highlighter-rouge">Reverse Engineering</code> · <code class="language-plaintext highlighter-rouge">JavaScript</code> · <code class="language-plaintext highlighter-rouge">JSVM</code> · <code class="language-plaintext highlighter-rouge">Obfuscation</code></p>
 
-        <h3 id="reversing-famousrussianmarketplace"><a href="/blog/famousrussianmarketplace-re/">Reversing
-                FamousRussianMarketplace</a></h3>
+<h3 id="reversing-famousrussianmarketplace"><a href="/blog/famousrussianmarketplace-re/">Reversing FamousRussianMarketplace</a></h3>
 
-        <p>My full thought process while reversing the JavaScript Virtual Machine used by a major Russian e‑commerce
-            platform.</p>
+<p>My full thought process while reversing the JavaScript Virtual Machine used by a major Russian e‑commerce platform.</p>
 
-        <p><strong>Topics:</strong> <code class="language-plaintext highlighter-rouge">Reverse Engineering</code> ·
-            <code class="language-plaintext highlighter-rouge">JavaScript</code> · <code
-                class="language-plaintext highlighter-rouge">JSVM</code> · <code
-                class="language-plaintext highlighter-rouge">Obfuscation</code></p>
+<p><strong>Topics:</strong> <code class="language-plaintext highlighter-rouge">Reverse Engineering</code> · <code class="language-plaintext highlighter-rouge">JavaScript</code> · <code class="language-plaintext highlighter-rouge">JSVM</code> · <code class="language-plaintext highlighter-rouge">Obfuscation</code></p>
 
 
     </main>

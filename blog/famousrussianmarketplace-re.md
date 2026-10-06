@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Reversing FamousRussianMarketplace
+description: Full thought process while reversing the JavaScript Virtual Machine used by a major Russian e‑commerce platform, applying the tracing technique.
 permalink: /blog/famousrussianmarketplace-re/
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Bet365 VM Static Disassembler
+description: Reverse engineering a JavaScript Virtual Machine used by Bet365, including bytecode analysis, opcode identification and static disassembly.
 permalink: /blog/bet365-vm-disassembler/
 ---
 

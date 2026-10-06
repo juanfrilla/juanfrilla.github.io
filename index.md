@@ -5,5 +5,26 @@ title: Home
 
 # Hi there!
 
-My name is Juan Fran. Studied Telecommunications Engineering at University of Las Palmas de Gran Canaria. My recent projects have been centered on reverse engineering javascript virtual machine based obfuscation. 
-Click here to download my <a href="juanfrilla.streamlit.app"> resume </a>.
+My name is Juan Fran. I studied Telecommunications Engineering at the University of Las Palmas de Gran Canaria.
+
+I have 4+ years of experience in web scraping. Over time, I became interested in CAPTCHAs, anti-bot systems, and JavaScript obfuscation.
+
+My recent projects have focused on reverse engineering JavaScript Virtual Machine (JSVM)-based obfuscation.
+
+Click here to download my <a href="https://juanfrilla.streamlit.app">resume</a>.
+
+<div class="social-links">
+
+    <a href="https://github.com/juanfrilla" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/jfmozaga/" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+    </a>
+
+    <a href="https://www.youtube.com/@jfmozaga" aria-label="YouTube">
+        <i class="fa-brands fa-youtube"></i>
+    </a>
+
+</div>

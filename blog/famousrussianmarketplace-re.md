@@ -1,3 +1,9 @@
+---
+layout: default
+title: Reversing FamousRussianMarketplace
+permalink: /blog/famousrussianmarketplace-re/
+---
+
 # Reversing FamousRussianMarketplace
 
 This repository documents my full thought process while reversing the JavaScript Virtual Machine used by a major Russian e‑commerce platform. The VM is responsible for generating two critical parameters included in the client payload: `fp` and `token`. The write-up walks through the deobfuscation steps, the VM analysis, the anti-debugging traps, the AST work, and ends by recovering a captured fingerprint in clear text.

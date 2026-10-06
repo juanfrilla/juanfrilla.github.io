@@ -1,3 +1,9 @@
+---
+layout: default
+title: Bet365 VM Static Disassembler
+permalink: /blog/bet365-vm-disassembler/
+---
+
 # Bet365 VM Static Disassembler
 
 > **Disclaimer:** This project is for educational and research purposes only. Use of this tool must comply with the target website's Terms of Service and applicable data privacy laws.

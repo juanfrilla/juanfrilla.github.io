@@ -6,11 +6,11 @@ description: Juan Fran Martín — Telecommunications Engineer specialized in we
 
 # Hi there!
 
-My name is Juan Fran Martín, and I’m a Guanche, the aborigins from the Canary Islands, Spain. I studied Telecommunications Engineering, specializing in Sound and Image, at the University of Las Palmas de Gran Canaria, driven by my passion for discovering new artists and exploring new music genres.
+My name is Juan Fran Martín, and I’m a Guanche (the name of the aborigins of the Canary Islands, that came from berberic (Amazigh) tribes from North Africa). I studied Telecommunications Engineering, specializing in Sound and Image, at the University of Las Palmas de Gran Canaria, driven by my passion for discovering new artists and exploring new music genres.
 
-I have 4+ years of experience in web scraping. Over time, I became interested in CAPTCHAs, anti-bot systems, and JavaScript obfuscation.
+I enjoyed automated things, that's why I have 4+ years of experience in web scraping. Over time, I became interested in CAPTCHAs, anti-bot systems, and JavaScript obfuscation.
 
-My recent projects have focused on reverse engineering JavaScript Virtual Machine (JSVM)-based obfuscation.
+My recent projects have focused on reverse engineering JavaScript Virtual Machine (JSVM) based obfuscation.
 
 When I'm not coding, I'm bodyboarding to relax my mind.
 

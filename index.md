@@ -14,7 +14,7 @@ My recent projects have focused on reverse engineering JavaScript Virtual Machin
 
 When I'm not coding, I'm bodyboarding to relax my mind.
 
-Click here to download my <a href="https://juanfrilla.streamlit.app">resume</a>.
+Download my <a href="https://juanfrilla.streamlit.app">resume</a> and don't forget to take a look at my <a href="/blog/">blog</a>.
 
 <div class="social-links">
 

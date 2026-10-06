@@ -2,6 +2,8 @@
 layout: default
 title: Blog
 permalink: /blog/
+description: Technical articles about web scraping, web security, reverse engineering and JavaScript virtual machines.
+
 ---
 
 # Blog

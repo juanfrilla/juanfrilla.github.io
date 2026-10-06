@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Home
-description: Juan Fran — Telecommunications Engineer specialized in web scraping, web security and JavaScript reverse engineering.
+description: Juan Fran Martín — Telecommunications Engineer specialized in web scraping, web security and JavaScript reverse engineering.
 ---
 
 # Hi there!
 
-My name is Juan Fran, and I’m a Guanche, the aborigins from the Canary Islands, Spain. I studied Telecommunications Engineering, specializing in Sound and Image, at the University of Las Palmas de Gran Canaria, driven by my passion for discovering new artists and exploring new music genres.
+My name is Juan Fran Martín, and I’m a Guanche, the aborigins from the Canary Islands, Spain. I studied Telecommunications Engineering, specializing in Sound and Image, at the University of Las Palmas de Gran Canaria, driven by my passion for discovering new artists and exploring new music genres.
 
 I have 4+ years of experience in web scraping. Over time, I became interested in CAPTCHAs, anti-bot systems, and JavaScript obfuscation.
 

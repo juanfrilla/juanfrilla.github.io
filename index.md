@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+description: Juan Fran — Telecommunications Engineer specialized in web scraping, web security and JavaScript reverse engineering.
 ---
 
 # Hi there!

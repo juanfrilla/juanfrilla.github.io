@@ -9,6 +9,8 @@ permalink: /blog/famousrussianmarketplace-re/
 
 This repository documents my full thought process while reversing the JavaScript Virtual Machine used by a major Russian e‑commerce platform. The VM is responsible for generating two critical parameters included in the client payload: `fp` and `token`. The write-up walks through the deobfuscation steps, the VM analysis, the anti-debugging traps, the AST work, and ends by recovering a captured fingerprint in clear text.
 
+**The full repository can be found on:** [GitHub repository](https://github.com/juanfrilla/FamousRussianMarketplace)
+
 Turning this into a working solver is left as an exercise — see [Solver hints](#solver-hints).
 
 **Disclaimer:** This project is for educational and research purposes only. The target is anonymized on purpose. Use of this material must comply with the target website's Terms of Service and applicable data privacy laws.
@@ -1352,6 +1354,3 @@ Everything above is the analysis: how the VM is deobfuscated, how it is traced, 
 - **Rotate proxies, one attempt per IP.** A single malformed request flags the IP immediately, and after that even a correct payload is rejected from that address — which makes debugging on one IP misleading, since you end up blaming the payload for an IP problem. Get the payload right against a local decrypt round-trip first, then send each attempt from a fresh proxy.
 - **The browser identity has to agree with itself.** Inside the fingerprint, the user agent, the `hev` client-hint brands and `navigator.appVersion` all have to describe the same browser build; a payload that claims one version in the UA and another in the brands array is an inconsistency the server gets for free.
 - **A note on versions.** This write-up documents VM **v44** — the build in `antibot.js`. The site now serves `script_v47_3.js` (`"version": "47_3"`), and the mechanism is the same; only some fingerprint fields changed: a new top-level `browser_2` field, a different client-hint brand format (`Not;A=Brand` v8 instead of `Not-A.Brand` v24), and a bumped `challenge.version`. The structure of the reversing holds; the field list does not.
-
-
-**The full repository can be found on:** [GitHub repository](https://github.com/juanfrilla/FamousRussianMarketplace)

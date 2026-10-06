@@ -11,6 +11,8 @@ permalink: /blog/bet365-vm-disassembler/
 
 Static disassembler for the **BET365 VM** that transforms encoded VM bytecode into a human-readable representation of its instructions.
 
+**The full repository can be found on:** [GitHub repository](https://github.com/juanfrilla/bet365-disasm)
+
 ---
 
 ## Reverse Engineering Approach
@@ -330,6 +332,3 @@ By recovering the operand consumption and semantics of each opcode, the VM's byt
 |  `248` | `LSHIFT`               |
 |  `254` | `CMPNE` (`!=`)         |
 |  `255` | `STRICT EQUAL` (`===`) |
-
-
-**The full repository can be found on:** [GitHub repository](https://github.com/juanfrilla/bet365-disasm)

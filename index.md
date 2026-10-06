@@ -6,11 +6,13 @@ description: Juan Fran — Telecommunications Engineer specialized in web scrapi
 
 # Hi there!
 
-My name is Juan Fran. I studied Telecommunications Engineering at the University of Las Palmas de Gran Canaria.
+My name is Juan Fran, and I’m a Guanche, the aborigins from the Canary Islands, Spain. I studied Telecommunications Engineering, specializing in Sound and Image, at the University of Las Palmas de Gran Canaria, driven by my passion for discovering new artists and exploring new music genres.
 
 I have 4+ years of experience in web scraping. Over time, I became interested in CAPTCHAs, anti-bot systems, and JavaScript obfuscation.
 
 My recent projects have focused on reverse engineering JavaScript Virtual Machine (JSVM)-based obfuscation.
+
+When I'm not coding, I'm bodyboarding to relax my mind.
 
 Click here to download my <a href="https://juanfrilla.streamlit.app">resume</a>.
 

@@ -227,6 +227,6 @@ git push
 
 ## Author
 
-**Juan Francisco Martín Rodríguez**
+**Juan Fran Martín**
 
 Telecommunications Engineer · Python · Web Scraping · Web Security · Reverse Engineering

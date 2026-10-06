@@ -244,10 +244,13 @@
 
         img {
             max-width: 100%;
-
             height: auto;
-
             border-radius: 8px;
+        }
+
+        .post-image {
+            width: 100%;
+            max-width: none;
         }
 
         /* Mobile */
@@ -694,9 +697,9 @@ npm <span class="nb">install
 
 <p>Before instrumenting anything, it is worth freezing the sources of entropy. The VM relies on several nondeterministic browser APIs such as <code class="language-plaintext highlighter-rouge">Date.now</code>, <code class="language-plaintext highlighter-rouge">Math.random</code> and <code class="language-plaintext highlighter-rouge">performance.now</code>, and those values make each run slightly different, so two traces are never comparable:</p>
 
-<p><img src="screenshots/date.now.png" alt="Date now" />
-<img src="screenshots/math.random.png" alt="Math random" />
-<img src="screenshots/performance.now.png" alt="performance now" /></p>
+<p><img src="/projects/famousrussianmarketplace/screenshots/date.now.png" alt="Date now" />
+<img src="/projects/famousrussianmarketplace/screenshots/math.random.png" alt="Math random" />
+<img src="/projects/famousrussianmarketplace/screenshots/performance.now.png" alt="performance now" /></p>
 
 <p>In <code class="language-plaintext highlighter-rouge">antibot.js</code>, I added the following at the beginning of the file:</p>
 
@@ -907,7 +910,7 @@ npm <span class="nb">install
 
 <p>So we reload the page to trigger the VM execution and start analyzing it. This is the first thing that happens:</p>
 
-<p><img src="screenshots/parseChallenge.png" alt="parse challenge" /></p>
+<p><img src="/projects/famousrussianmarketplace/screenshots/parseChallenge.png" alt="parse challenge" /></p>
 
 <p>This is the actual code that corresponds to the previous image:</p>
 
@@ -991,11 +994,11 @@ L806|     this.a(this.b(this.c(this.d(a,a-b,b*2,this.f[this.e(this.h(),b/2,a,thi
 
 <p>To discover what each of these functions contains, we use the browser’s developer tools: we open <code class="language-plaintext highlighter-rouge">index.html</code> in the browser and set a breakpoint inside the <code class="language-plaintext highlighter-rouge">pcFunctionMap</code> object we just added to <a href="js/antibot.js">js/antibot.js</a>.</p>
 
-<p><img src="screenshots/breakpoint.png" alt="Breakpoint" /></p>
+<p><img src="/projects/famousrussianmarketplace/screenshots/breakpoint.png" alt="Breakpoint" /></p>
 
 <p>When the breakpoint is hit, we can inspect the values stored in the VM’s internal fields and see what’s inside each of <code class="language-plaintext highlighter-rouge">this.a</code> … <code class="language-plaintext highlighter-rouge">this.h</code>.</p>
 
-<p><img src="screenshots/thisValues.png" alt="Register values" /></p>
+<p><img src="/projects/famousrussianmarketplace/screenshots/thisValues.png" alt="Register values" /></p>
 
 <p>With this information, we can deduce that:</p>
 
@@ -1067,7 +1070,7 @@ L806|     this.a(this.b(this.c(this.d(a,a-b,b*2,this.f[this.e(this.h(),b/2,a,thi
 
 <p>With all the logs commented out except the one inside PC 23169, we can observe the start of the fingerprint when we reload the page:</p>
 
-<p><img src="screenshots/fpAscii.png" alt="Fingerprint Ascii" /></p>
+<p><img src="/projects/famousrussianmarketplace/screenshots/fpAscii.png" alt="Fingerprint Ascii" /></p>
 
 <p>The left column is the plaintext fingerprint, character by character. We can see that this part contains the fragment <code class="language-plaintext highlighter-rouge">{"challenge":{"id":"fab_chlg_20260623075859_01KVSQTQA3ZEJ8GF00XZZSVVDD"…</code>, so at this point we are already able to copy and paste the full fingerprint out of the console.</p>
 
@@ -1079,7 +1082,7 @@ L806|     this.a(this.b(this.c(this.d(a,a-b,b*2,this.f[this.e(this.h(),b/2,a,thi
 
 <p>To continue reversing this VM, we need to run the full trace and jump to the end, where the <code class="language-plaintext highlighter-rouge">fp</code> field is assembled. In my case I logged everything (as shown in the screenshot), but in practice it’s enough to log only the <code class="language-plaintext highlighter-rouge">FUNC_CALL</code> entries.</p>
 
-<p><img src="screenshots/endOfExecution.png" alt="End of execution" /></p>
+<p><img src="/projects/famousrussianmarketplace/screenshots/endOfExecution.png" alt="End of execution" /></p>
 
 <p>We can observe that when the VM calls <code class="language-plaintext highlighter-rouge">formatter.stringify(this)</code>, the internal <code class="language-plaintext highlighter-rouge">WordArray</code> (the large list of 32‑bit integers) is converted into a Base64 string using the OpenSSL format. This is why the encrypted fingerprint starts with <code class="language-plaintext highlighter-rouge">U2FsdGVkX1...</code>, which is the Base64 encoding of <code class="language-plaintext highlighter-rouge">"Salted__"</code>. From this we can infer that the <code class="language-plaintext highlighter-rouge">fp</code> field is derived from that <code class="language-plaintext highlighter-rouge">WordArray</code>, so the next step is to analyze how the <code class="language-plaintext highlighter-rouge">WordArray</code> is built — and that is also what ultimately reveals the encryption method.</p>
 
@@ -1135,7 +1138,7 @@ L548820| {token: 'sc:vqXvZLZwjY7A5xt31kygKQ:zfxK0BrieuGSRVQmR_-80Ghh…', fp: 'U
 
 <p>Reloading the page with only those logs enabled, we get:</p>
 
-<p><img src="screenshots/discoverEncryption.png" alt="Discover encryption" /></p>
+<p><img src="/projects/famousrussianmarketplace/screenshots/discoverEncryption.png" alt="Discover encryption" /></p>
 
 <p>Out of the whole list, only these ever fire:</p>
 
@@ -1155,11 +1158,11 @@ L548820| {token: 'sc:vqXvZLZwjY7A5xt31kygKQ:zfxK0BrieuGSRVQmR_-80Ghh…', fp: 'U
 
 <p>To save it, click anywhere in the console, right click, then <em>Save as…</em>:</p>
 
-<p><img src="screenshots/save_as.png" alt="Save AS" /></p>
+<p><img src="/projects/famousrussianmarketplace/screenshots/save_as.png" alt="Save AS" /></p>
 
 <p>Then pick the local folder and save:</p>
 
-<p><img src="screenshots/save.png" alt="Save" /></p>
+<p><img src="/projects/famousrussianmarketplace/screenshots/save.png" alt="Save" /></p>
 
 <p>That gives a single <code class="language-plaintext highlighter-rouge">.log</code> file — in my run, 548964 lines and 36 MB with <code class="language-plaintext highlighter-rouge">FUNC_CALL</code> and <code class="language-plaintext highlighter-rouge">PROPACCESS</code> logging enabled. Every excerpt below is quoted from it, with the original line numbers, so the numbers line up across sections: they all come from the same execution.</p>
 
@@ -1684,7 +1687,7 @@ L543735| 18445 - FUNC_CALL startsWith(0000000000000000) → true
   <li><strong>A note on versions.</strong> This write-up documents VM <strong>v44</strong> — the build in <code class="language-plaintext highlighter-rouge">antibot.js</code>. The site now serves <code class="language-plaintext highlighter-rouge">script_v47_3.js</code> (<code class="language-plaintext highlighter-rouge">"version": "47_3"</code>), and the mechanism is the same; only some fingerprint fields changed: a new top-level <code class="language-plaintext highlighter-rouge">browser_2</code> field, a different client-hint brand format (<code class="language-plaintext highlighter-rouge">Not;A=Brand</code> v8 instead of <code class="language-plaintext highlighter-rouge">Not-A.Brand</code> v24), and a bumped <code class="language-plaintext highlighter-rouge">challenge.version</code>. The structure of the reversing holds; the field list does not.</li>
 </ul>
 
-<p><strong>GitHub repository:</strong> <a href="https://github.com/juanfrilla/FamousRussianMarketplace">GitHub repository</a></p>
+<p><strong>The full repository can be found on:</strong> <a href="https://github.com/juanfrilla/FamousRussianMarketplace">GitHub repository</a></p>
 
 
     </main>

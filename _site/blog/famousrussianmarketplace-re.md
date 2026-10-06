@@ -370,9 +370,9 @@ We can also infer the identity of the Program Counter (PC) from lines such as `t
 
 Before instrumenting anything, it is worth freezing the sources of entropy. The VM relies on several nondeterministic browser APIs such as `Date.now`, `Math.random` and `performance.now`, and those values make each run slightly different, so two traces are never comparable:
 
-![Date now](screenshots/date.now.png)
-![Math random](screenshots/math.random.png)
-![performance now](screenshots/performance.now.png)
+![Date now](/projects/famousrussianmarketplace/screenshots/date.now.png)
+![Math random](/projects/famousrussianmarketplace/screenshots/math.random.png)
+![performance now](/projects/famousrussianmarketplace/screenshots/performance.now.png)
 
 In `antibot.js`, I added the following at the beginning of the file:
 
@@ -583,7 +583,7 @@ At this point it's time to execute the JS file we just modified. We don't need t
 
 So we reload the page to trigger the VM execution and start analyzing it. This is the first thing that happens:
 
-![parse challenge](screenshots/parseChallenge.png)
+![parse challenge](/projects/famousrussianmarketplace/screenshots/parseChallenge.png)
 
 This is the actual code that corresponds to the previous image:
 
@@ -670,11 +670,11 @@ And then using that inside the `FUNC_CALL` handler to swap the VM-generated func
 
 To discover what each of these functions contains, we use the browser's developer tools: we open `index.html` in the browser and set a breakpoint inside the `pcFunctionMap` object we just added to [js/antibot.js](js/antibot.js).
 
-![Breakpoint](screenshots/breakpoint.png)
+![Breakpoint](/projects/famousrussianmarketplace/screenshots/breakpoint.png)
 
 When the breakpoint is hit, we can inspect the values stored in the VM's internal fields and see what's inside each of `this.a` … `this.h`.
 
-![Register values](screenshots/thisValues.png)
+![Register values](/projects/famousrussianmarketplace/screenshots/thisValues.png)
 
 With this information, we can deduce that:
 
@@ -743,7 +743,7 @@ We don't see CryptoJS imported anywhere, by the way, which suggests this JS logi
 
 With all the logs commented out except the one inside PC 23169, we can observe the start of the fingerprint when we reload the page:
 
-![Fingerprint Ascii](screenshots/fpAscii.png)
+![Fingerprint Ascii](/projects/famousrussianmarketplace/screenshots/fpAscii.png)
 
 The left column is the plaintext fingerprint, character by character. We can see that this part contains the fragment `{"challenge":{"id":"fab_chlg_20260623075859_01KVSQTQA3ZEJ8GF00XZZSVVDD"…`, so at this point we are already able to copy and paste the full fingerprint out of the console.
 
@@ -755,7 +755,7 @@ At this moment the exact encryption method is still unconfirmed; the only thing 
 
 To continue reversing this VM, we need to run the full trace and jump to the end, where the `fp` field is assembled. In my case I logged everything (as shown in the screenshot), but in practice it's enough to log only the `FUNC_CALL` entries.
 
-![End of execution](screenshots/endOfExecution.png)
+![End of execution](/projects/famousrussianmarketplace/screenshots/endOfExecution.png)
 
 We can observe that when the VM calls `formatter.stringify(this)`, the internal `WordArray` (the large list of 32‑bit integers) is converted into a Base64 string using the OpenSSL format. This is why the encrypted fingerprint starts with `U2FsdGVkX1...`, which is the Base64 encoding of `"Salted__"`. From this we can infer that the `fp` field is derived from that `WordArray`, so the next step is to analyze how the `WordArray` is built — and that is also what ultimately reveals the encryption method.
 
@@ -809,7 +809,7 @@ For me this was the hardest part to figure out: understanding how that large arr
 
 Reloading the page with only those logs enabled, we get:
 
-![Discover encryption](screenshots/discoverEncryption.png)
+![Discover encryption](/projects/famousrussianmarketplace/screenshots/discoverEncryption.png)
 
 Out of the whole list, only these ever fire:
 
@@ -827,11 +827,11 @@ From this point on the interesting parts of the execution are buried thousands o
 
 To save it, click anywhere in the console, right click, then *Save as…*:
 
-![Save AS](screenshots/save_as.png)
+![Save AS](/projects/famousrussianmarketplace/screenshots/save_as.png)
 
 Then pick the local folder and save:
 
-![Save](screenshots/save.png)
+![Save](/projects/famousrussianmarketplace/screenshots/save.png)
 
 That gives a single `.log` file — in my run, 548964 lines and 36 MB with `FUNC_CALL` and `PROPACCESS` logging enabled. Every excerpt below is quoted from it, with the original line numbers, so the numbers line up across sections: they all come from the same execution.
 
@@ -1347,4 +1347,4 @@ Everything above is the analysis: how the VM is deobfuscated, how it is traced, 
 - **A note on versions.** This write-up documents VM **v44** — the build in `antibot.js`. The site now serves `script_v47_3.js` (`"version": "47_3"`), and the mechanism is the same; only some fingerprint fields changed: a new top-level `browser_2` field, a different client-hint brand format (`Not;A=Brand` v8 instead of `Not-A.Brand` v24), and a bumped `challenge.version`. The structure of the reversing holds; the field list does not.
 
 
-**GitHub repository:** [GitHub repository](https://github.com/juanfrilla/FamousRussianMarketplace)
+**The full repository can be found on:** [GitHub repository](https://github.com/juanfrilla/FamousRussianMarketplace)

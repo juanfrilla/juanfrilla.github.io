@@ -325,4 +325,4 @@ By recovering the operand consumption and semantics of each opcode, the VM's byt
 |  `255` | `STRICT EQUAL` (`===`) |
 
 
-**GitHub repository:** [GitHub repository](https://github.com/juanfrilla/bet365-disasm)
+**The full repository can be found on:** [GitHub repository](https://github.com/juanfrilla/bet365-disasm)

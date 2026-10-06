@@ -1,5 +1,9 @@
-# Hello there!
+---
+layout: default
+title: Home
+---
 
-My name is Juan Fran. I'm a Telecommunications Engineer from Lanzarote, Canary Islands.
+# Hi there!
 
-I'm interested in web scraping, web security and reverse engineering.
+My name is Juan Fran. Studied Telecommunications Engineering at University of Las Palmas de Gran Canaria. My recent projects have been centered on reverse engineering javascript virtual machine based obfuscation. 
+Click here to download my <a href="juanfrilla.streamlit.app"> resume </a>.
